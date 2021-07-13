@@ -1,4 +1,4 @@
-# Project Name
+# Dungeon Crawler - A Library of Text-based Adventure Games
 ![Project Picture](./link)
 
 # Table of contents
