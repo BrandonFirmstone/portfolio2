@@ -79,6 +79,7 @@ The website will be structured to display a selection of the games available in 
 ![Settings Modal Wireframe](./assets/images/README-images/settings-modal-wireframe.png)
 
 ![Library Wireframe](./assets/images/README-images/library-wireframe.png)
+
 ### Surface
 
 
@@ -92,24 +93,27 @@ The website will be structured to display a selection of the games available in 
 
 
 ## README Purpose
-
-
-
+The README is used in order to convey to the reader the purpose of this website and how it has been developed. Future developers that may work on this site as well as myself can refer to this document to find information regarding the website's current development stage, any bugs and issues found and more. It also means that future developers can keep to the same styles and keep the website consistent.
 
 ## Site Structure
 
 
 
 ## Naming Conventions
-
+The naming conventions for each file within the repository is using lower-case characters and hyphens to separate the words. Classes and IDs in HTML will use this same format. Variables and other names in JavaScript will use camel case (Capitalizing the first letter of each word bar the first word. For example, camelCaseHere.) 
 
 
 ## Languages Used
-
-
+The languages used for this website are as follows:
+- HTML for the structure of the pages
+- CSS for styling the pages
+- JavaScript for interactivity and functionality (As well as the games on the site)
 
 ## Tools Used
-
+For the development of this site, the following tools have been used:
+- GitHub for version control and storing the in-development site
+- GitPod for writing the code on the website
+- Balsamiq Wireframes used to draw the wireframes that the website has been based on.
 
 
 # Features
@@ -126,7 +130,8 @@ The website will be structured to display a selection of the games available in 
 
 ## Future/Desired Features
 
-
+- User Logins
+- Ecommerce, user subscriptions to unlock 'Premium' games
 
 # Testing
 
