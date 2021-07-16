@@ -14,35 +14,43 @@
     .header{
         display: flex;
         width: 100%;
-        max-height: 200px;
-        padding: 20px;
+        max-width: 100vw;
+        max-height: 100px;
+        height: 50px;
+        padding: 10px;
         background-color: #808080;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
     }
-
+    a, a:link, a:visited{
+        text-decoration: none;
+        color: black;
+    }
     /* Style applicable to the navigation */
-    nav{
+    /*nav{
         width: fit-content;
         display: inline;
         float: right;
-    }
+    }*/
     .navigation{
         display: inline-block;
         overflow: hidden;
-        margin-right: 10px;
+        margin-right: 0;
     }
     .navigation-list{
         list-style-type: none;
         margin: 0;
-        padding: 15px;
+        padding: 15px 0 15px 15px;
         float: right;
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .navigation-item{
         display: inline;
         float: right;
-        margin: 0 auto;
+        /*margin: 0 auto;*/
         padding:30px;
         font-size: 26px;
         -webkit-transition: color 3s;
@@ -60,11 +68,13 @@
     body, html{
         padding: 0;
         margin: 0;
+        overflow-x: hidden;
+        width: 100vw;
     }
     /* Other style rules */
     h1{
         margin: 0;
-        font-size: 56px;
+        font-size: 50px;
     }
 /* End of section
 
@@ -72,7 +82,24 @@
 #index-call-to-action{
     width: 100%;
     height: 300px;
+    background-image: url(../images/call-to-action-index.jpg);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     object-fit: cover;
+}
+
+#call-to-action-caption{
+    display: flex;
+    height: auto;
+    width: 60%;
+    background-color: rgba(30, 30, 30, 0.25);
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 40px 0 40px 0;
 }
 /* End of section */
 
