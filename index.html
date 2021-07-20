@@ -39,30 +39,24 @@
                         <a href="./library.html"><li class="navigation-item">All Games</li></a>
                         <a href="./404.html"><li class="navigation-item">Account</li></a>
                         <a href="./index.html"><li class="navigation-item active">Home</li></a>
-                        <a><li class="navigation-item">Settings</li></a>
                     </ul>
-                    
-                    <div class="dropdown-button mobile">
-                        <input name="dropdown-toggle" type="checkbox" />
-                        <label for="dropdown-toggle">
-                            <i class="fas fa-bars dropdown-icon"></i>
-                        </label>
-                        
-                        <div class="dropdown-menu">
-                            <ul>
-                                <a href="./library.html"><li>All Games</li></a>
-                                <a href="./404.html"><li>Account</li></a>
-                                <a href="./index.html"><li>Home</li></a>
-                                <a><li>Settings</li></a>
-                            </ul>
-                        </div>
-                    </div>
+                    <a href="javascript:void(0)" onclick="openNavigationMenu()" class="navigation-toggle">
+                        <!-- Burger button used for navigation -->
+                        <i class="fas fa-bars float-right burger-button"></i>
+                    </a>
                 </div>
             </nav>
         </div>
     </header>
     <!-- End of the page header-->
-
+    <div class="overlay">
+        <a href="javascript:void(0)" class="overlay-close">&times;</a>
+        <div class="overlay-menu">
+            <a>All Games</a>
+            <a>Account</a>
+            <a>Home</a>
+        </div>
+    </div>
 <!-------------------------------------------------------------------------------------------------->
 
 <!-- The main area of the page -->
@@ -149,6 +143,6 @@
 
     <!-- Used to run scripts in another location on the page -->
     <script src="https://kit.fontawesome.com/7a193223e3.js" crossorigin="anonymous"></script> <!-- Script from Fontawesome.com -->
-    <script></script>
+    <script src="assets/script/script.js"></script>
 </body>
 </html>

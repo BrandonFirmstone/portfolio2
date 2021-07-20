@@ -30,67 +30,74 @@
         text-decoration: none;
         color: black;
     }
-    /* Style applicable to the navigation */
-    /*nav{
-        width: fit-content;
-        display: inline;
-        float: right;
-    }*/
-    .navigation{
-        display: inline-block;
-        overflow: hidden;
-        margin-right: 0;
+    .dropdown-wrapper{
+        display: none;
+    }
+    #menu{
+        display: none;
+    }
+    i.burger-button{
+        display: none;
     }
     .navigation-list{
         list-style-type: none;
-        margin: 0;
-        padding: 15px 0 15px 15px;
-        float: right;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: inline-flex;
+        padding: 20px;
     }
     .navigation-item{
-        display: inline;
-        float: right;
-        /*margin: 0 auto;*/
-        padding:30px;
-        font-size: 26px;
-        -webkit-transition: color 3s;
-        -moz-transition: color 3s;
-        -o-transition: color 3s;
-        transition: color 3s;
+        margin: 20px;
     }
-    .navigation-item:hover{
-        color: #f5f5f5;
+    .overlay{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 9;
+        background-color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.8);
+        overflow-x: hidden;
+        transition: 0.5s;
     }
-    .navigation-item.active{
-        color: #f5f5f5;
-    }
-    .dropdown-button{
+    .overlay-menu{
         position: relative;
-        display: inline-block;
+        top: 25%;
+        width: 100%; 
+        text-align: center;
+        margin-top: 30px;
     }
-    .dropdown-menu{
-        display: none;
+    .overlay a{
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block; /* Display block instead of inline */
+        transition: 0.3s; /* Transition effects on hover (color) */
+    }
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+      }
+      .navigation-toggle{
+          padding: 10px;
+          height: 75px;
+          width: 85px;
+          z-index: 8;
+      }
+      /* Position the close button (top right corner) */
+      .overlay .closebtn {
         position: absolute;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-    .dropdown-button:hover .dropdown-menu{
-        display: block;
-    }
-    .dropdown-icon{
-        font-size: 40px;
-    }
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+
     /* Style applicable to the body */
     body, html{
         padding: 0;
         margin: 0;
         overflow-x: hidden;
         width: 100vw;
-        height: 100%;
+        height: fit-content;
         overflow-y: scroll;
+        overflow-x: hidden;
         background-color: #f5f5f5;
         font-size: 20px;
     }
@@ -140,6 +147,7 @@
     width: 100%;
     height: 500px;
     display: flex;
+    overflow-y: hidden;
 }
 .left-align{
     text-align: left;
@@ -176,6 +184,27 @@
     }
     .navigation-list{
         display: none;
+    }
+    .dropdown-button{
+        z-index: 2;
+    }
+    i.burger-button {
+	    display: inline-block;
+	    color: black;
+	    font-size: 40px;
+        padding: 20px;
+    }
+    .nav{
+        display: flex;
+        object-position: center;
+    }
+    .navigation-toggle{
+        width: 75px;
+        height: 85px;
+    }
+    .navigation{
+        padding: 25px;
+        margin: 10px;
     }
 }
 /* */

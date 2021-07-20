@@ -8,3 +8,17 @@
     to visually seperate them so that it is easier to read
 
 */
+
+let menuButton = document.getElementsByClassName("navigation-toggle");
+menuButton.addEventListener('click', openNavigationMenu);
+
+let closeMenuButton = document.getElementsByClassName("overlay-close");
+closeMenuButton.addEventListener('click', closeNavigationMenu);
+
+function openNavigationMenu(){
+    document.getElementByClass("overlay").style.width = "100%";
+}
+
+function closeNavigationMenu(){
+    document.getElementByClass("overlay").style.width = "0";
+}
