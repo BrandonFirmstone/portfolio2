@@ -8,7 +8,7 @@
     to visually seperate them so that it is easier to read
 
 */
-
+{
 let menuButton = document.getElementById("navigation-toggle");
 menuButton.addEventListener('click', openNavigationMenu);
 
@@ -23,4 +23,5 @@ function openNavigationMenu(){
 function closeNavigationMenu(){
     document.getElementById("overlay").style.width = "0";
     console.log("closeNavigationMenu ran");
+}
 }
