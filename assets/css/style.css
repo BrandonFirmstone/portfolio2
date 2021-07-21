@@ -179,6 +179,7 @@
 
 /* Responsive Cutoff A */
 @media (max-width: 768px){
+    /* Navigation-specific responsive rules */
     .mobile{
         display: inline-block;
     }
@@ -208,6 +209,10 @@
     .navigation{
         padding: 25px;
         margin: 10px;
+    }
+    /* Index specific responsive rules */
+    #index-call-to-action{
+        font-size: smaller;
     }
 }
 /* */
