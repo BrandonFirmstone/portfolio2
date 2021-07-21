@@ -206,5 +206,5 @@ For the development of this site, the following tools have been used:
 
 
 ## Acknowledgements
-
+- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav helped with the navigation menu for mobile devices
 
