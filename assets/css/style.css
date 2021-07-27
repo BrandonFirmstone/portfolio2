@@ -225,6 +225,7 @@
     box-shadow: -5px -5px 5px black;
     height: 40px;
     color: white;
+    margin: 10px;
     background-color: black;
     border: 1px solid white;
 }
