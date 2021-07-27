@@ -215,6 +215,19 @@
     #index-call-to-action{
         font-size: smaller;
     }
+    .game-summary{
+        width: 100%;
+        height: auto;
+        max-height: auto;
+        display: flex;
+        overflow-x: hidden;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin: 0;
+        padding: 0 25px;
+    }
 }
 /* */
 /* End of section */
