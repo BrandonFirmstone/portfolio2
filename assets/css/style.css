@@ -13,6 +13,9 @@
     /* Imported Fonts (from Google Fonts) */
     @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@1,700&display=swap');
 
+    *, *::before, *::after{
+        box-sizing:border-box;
+    }
     /* Style applicable to the header */
     .header{
         display: flex;
