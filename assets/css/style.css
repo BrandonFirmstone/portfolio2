@@ -27,6 +27,7 @@
         align-items: center;
         overflow: hidden;
         position: fixed;
+        top: 0;
     }
     a, a:link, a:visited{
         text-decoration: none;
@@ -112,7 +113,7 @@
         font-size: 46px;
         font-family: 'Gentium Book Basic', serif;
     }
-    .mobile{
+    .mobile-only{
         display: none;
     }
 /* End of section
@@ -180,7 +181,7 @@
 /* Responsive Cutoff A */
 @media (max-width: 768px){
     /* Navigation-specific responsive rules */
-    .mobile{
+    .mobile-only{
         display: inline-block;
     }
     .navigation-item{
