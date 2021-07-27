@@ -228,6 +228,11 @@
         margin: 0;
         padding: 0 25px;
     }
+    .game-thumbnail{
+        width: 90%;
+        height: auto;
+        margin: 10px 10px;
+    }
 }
 /* */
 /* End of section */
