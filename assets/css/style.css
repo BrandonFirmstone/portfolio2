@@ -153,6 +153,10 @@
 }
 #call-to-action-caption > a{
     color: #f5f5f5;
+    transition: 0.5s;
+}
+#call-to-action-caption a:hover{
+    font-size: larger;
 }
 .game-summary{
     width: 100%;
