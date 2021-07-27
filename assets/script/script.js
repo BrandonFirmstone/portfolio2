@@ -8,7 +8,7 @@
     to visually seperate them so that it is easier to read
 
 */
-{
+
 let menuButton = document.getElementById("navigation-toggle");
 menuButton.addEventListener('click', openNavigationMenu);
 
@@ -24,4 +24,9 @@ function closeNavigationMenu(){
     document.getElementById("overlay").style.width = "0";
     console.log("closeNavigationMenu ran");
 }
+
+/* https://www.designcise.com/web/tutorial/how-to-force-scroll-to-the-top-of-the-page-on-page-reload-using-javascript */
+window.onbeforeunload = function () {
+    /* Makes most browsers scroll to the top of the page when reloading */
+    window.scrollTo(0, 0);
 }
