@@ -10,18 +10,19 @@
     justify-content: space-between;
     align-items: center;
     width: 60%;
-    height: 400px;
+    height: fit-content;
     padding: 40px 20px;
-    margin: 200px auto;
+    margin: 150px auto;
     font-size: 24px;
-    background-color: #f5f5f5;
+    background-color: #738276;
     border-radius: 50px;
     box-shadow: 0 0 10px 2px black;
 }
 #dc-option-buttons{
     display: grid;
+    margin: 20px;
     gap: 10px;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(4, auto);
     font-size: 22px;
 }
 .dc-btn{
@@ -38,3 +39,23 @@
     border-color: black;
     background-color: hsl(0,0%,100%)
 }
+#dc-stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%;
+}
+.dc-player-stats{
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+#dc-health-bar{
+    margin: 20px;
+    width: 60%;
+    height: 30px;
+    background: #ff0000;
+}
+
