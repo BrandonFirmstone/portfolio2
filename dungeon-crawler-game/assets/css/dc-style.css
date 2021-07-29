@@ -1,0 +1,40 @@
+#dc-body{
+    background-image: url("../images/dungeon-texture.png");
+    background-repeat: repeat;
+    width: 100%;
+}
+
+#dc-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 400px;
+    padding: 40px 20px;
+    margin: 200px auto;
+    font-size: 24px;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 2px black;
+}
+#dc-option-buttons{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, auto);
+    font-size: 22px;
+}
+.dc-btn{
+    color: black;
+    background-color: hsl(0,0%,80%);
+    border: 2px solid gray;
+    padding: 30px;
+    font-size: 22px;
+    border-radius: 10px;
+    transition: 0.5s;
+    box-shadow: 2px 2px 5px 1px black;
+}
+.dc-btn:hover, .dc-btn:active{
+    border-color: black;
+    background-color: hsl(0,0%,100%)
+}
