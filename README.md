@@ -192,6 +192,17 @@ For the development of this site, the following tools have been used:
 
 # Deployment
 
+![Deployment Repository](./assets/images/README-images/deployment-repository.png)
+
+![Deployment Repository](./assets/images/README-images/deployment-settings.png)
+
+![Deployment Repository](./assets/images/README-images/deployment-pages.png)
+
+![Deployment Repository](./assets/images/README-images/deployment-pages-save.png)
+
+![Deployment Repository](./assets/images/README-images/deployment-ready.png)
+
+![Deployment Repository](./assets/images/README-images/deployment-complete.png)
 
 
 # Credits and Acknowledgements
