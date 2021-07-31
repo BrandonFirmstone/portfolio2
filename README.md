@@ -115,6 +115,7 @@ For the development of this site, the following tools have been used:
 - GitPod for writing the code on the website
 - Balsamiq Wireframes used to draw the wireframes that the website has been based on.
 - GIMP for editing pictures and images
+- GitHub Pages is used for the deployment of the site
 
 
 # Features
@@ -191,16 +192,35 @@ For the development of this site, the following tools have been used:
 
 
 # Deployment
+The deployment process is the process of allowing end users to access the software application. In this case, I am deploying the Dungeon Crawler website to Github Pages as a live website publicly accessible. 
+
+## Step One
 
 ![Deployment Repository](./assets/images/README-images/deployment-repository.png)
 
+The first step is to navigate to the site's repository on GitHub. This is where all of the files are stored during the development process. Here you can see every file in the repository, about the project on the right side and can view changes (known as commits). From here, we need to navigate to the settings page (highlighted in red)
+
+## Step Two
+
 ![Deployment Repository](./assets/images/README-images/deployment-settings.png)
+
+The settings page is where you can manage the different aspects of the repository, including who has access to it and the repository name. From this page, we need to navigate to near the bottom of this page to 'Pages' (highlighted in red)
+
+## Step Three
 
 ![Deployment Repository](./assets/images/README-images/deployment-pages.png)
 
+From GitHub Pages, you will want to click the dropdown box under Source and select the branch of your repository that you want to host. In this case, my only branch is the main one highlighted in red.
+
 ![Deployment Repository](./assets/images/README-images/deployment-pages-save.png)
 
+The next step is to simply click the save button highlighted in red.
+
+## Completion
+
 ![Deployment Repository](./assets/images/README-images/deployment-ready.png)
+
+After clicking save, the below message appears confirming that the site has been published to GitHub Pages. Upon clicking this link it will take you to the live site as shown below.
 
 ![Deployment Repository](./assets/images/README-images/deployment-complete.png)
 
@@ -210,11 +230,11 @@ For the development of this site, the following tools have been used:
 
 
 ## Content
-- https://www.teahub.io/viewwp/ioxwobJ_copyright-free-images-fantasy/ - Dungeon Crawler Thumbnail
+- All text content was written by myself.
 
 
 ## Media
-
+- https://www.teahub.io/viewwp/ioxwobJ_copyright-free-images-fantasy/ - Dungeon Crawler Thumbnail background
 
 
 ## Acknowledgements
