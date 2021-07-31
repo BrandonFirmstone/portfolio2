@@ -114,6 +114,7 @@ For the development of this site, the following tools have been used:
 - GitHub for version control and storing the in-development site
 - GitPod for writing the code on the website
 - Balsamiq Wireframes used to draw the wireframes that the website has been based on.
+- GIMP for editing pictures and images
 
 
 # Features
