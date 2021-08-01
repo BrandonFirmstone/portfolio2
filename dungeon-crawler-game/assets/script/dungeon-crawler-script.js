@@ -6,6 +6,8 @@ let state = {}
 function startGame() {
   state = {}
   showTextNode(1)
+  document.getElementById("dc-health-bar").value = 100
+  document.getElementById("dc-health-bar").max = 100
 }
 
 function showTextNode(textNodeIndex) {
@@ -36,23 +38,39 @@ function selectOption(option) {
     return startGame()
   }
   state = Object.assign(state, option.setState)
-  if ((option.maxHealthChange <= 0) && (document.getElementById("dc-health-bar").max === document.getElementById("dc-health-bar").value)){
-    document.getElementById("dc-health-bar").max += option.maxHealthChange
-    console.log("health max reduced")
-    document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
-    console.log("health value reduced to max")
-  }else{
-    document.getElementById("dc-health-bar").max += option.maxHealthChange
-    console.log("health max changed")
+  if (option.maxHealthChange == null){
+    console.log("no max health change")
   }
-  if ((document.getElementById("dc-health-bar").value + option.healthValue) >= document.getElementById("dc-health-bar").max){
-    document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
-    console.log("Health maxed out")
-  }else{
-    document.getElementById("dc-health-bar").value += option.healthValue
-    console.log("health changed by" + option.healthValue)
+  else{
+    if ((option.maxHealthChange <= 0) && (document.getElementById("dc-health-bar").max === document.getElementById("dc-health-bar").value)){
+      document.getElementById("dc-health-bar").max += option.maxHealthChange
+      console.log("health max reduced")
+      document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
+      console.log("health value reduced to max")
+    }else{
+      document.getElementById("dc-health-bar").max += option.maxHealthChange
+      console.log("health max changed")
+    }
   }
-  showTextNode(nextTextNodeId)
+  if (option.healthValue == null){
+    console.log("no change in health value")
+  }
+  else{
+    if ((document.getElementById("dc-health-bar").value + option.healthValue) >= document.getElementById("dc-health-bar").max){
+      document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
+      console.log("Health maxed out")
+    }
+    else{
+      document.getElementById("dc-health-bar").value += option.healthValue
+      console.log("health changed by" + option.healthValue)
+    }
+  }
+  if (document.getElementById("dc-health-bar").value <= 0){
+    showTextNode(999)
+  }else{
+    showTextNode(nextTextNodeId)
+  }
+  
 }
 
 const textNodes = [
@@ -64,7 +82,7 @@ const textNodes = [
         text: 'Take the goo',
         setState: { blueGoo: true },
         maxHealthChange: 20,
-        healthValue: 0,
+        healthValue: -200,
         nextText: 2
       },
       {
@@ -209,7 +227,17 @@ const textNodes = [
         nextText: -1
       }
     ]
+  },
+  {
+    id: 999,
+    text: 'You have died. Start again?',
+    options: [
+      {
+        text:"Restart",
+        nextText: -1
+      }
+    ]
   }
 ]
 
-startGame()
+startGame();
