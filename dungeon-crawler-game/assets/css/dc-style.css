@@ -85,7 +85,7 @@
         margin: 10px auto;
     }
     #dc-option-buttons{
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(1, auto);
     }
     #dc-health-bar{
         width: 80%;
