@@ -123,7 +123,9 @@ For the development of this site, the following tools have been used:
 
 
 ## Initial Features Desired
-
+### Website
+- Showcase of the different games available
+- Footer including business address and social links
 
 
 ## Implemented Features

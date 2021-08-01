@@ -58,4 +58,42 @@
     height: 30px;
     background: #ff0000;
 }
+#dc-health-label{
+    margin: 0 auto;
+}
+#dc-health{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+@media (max-width: 768px){
+    #dc-container{
+        width: 90%;
+    }
+    #dc-text{
+        font-size: 22px;
+        text-align: center;
+    }
+    .dc-btn{
+        padding: 15px;
+    }
+    #dc-stats{
+        width: 100%;
+        font-size: 22px;
+        margin: 10px auto;
+    }
+    #dc-option-buttons{
+        grid-template-columns: repeat(2, auto);
+    }
+    #dc-health-bar{
+        width: 80%;
+    }
+    #dc-health{
+        flex-direction: column;
+    }
+    #dc-stats{
+        flex-direction: column;
+    }
+}
