@@ -39,19 +39,7 @@
     border-color: black;
     background-color: hsl(0,0%,100%)
 }
-#dc-stats{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    flex-basis: 100%;
-}
-.dc-player-stats{
-    width: 100px;
-    padding: 10px;
-    margin: 10px;
-}
+
 #dc-health-bar{
     margin: 20px;
     width: 60%;
