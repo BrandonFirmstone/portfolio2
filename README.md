@@ -116,7 +116,7 @@ For the development of this site, the following tools have been used:
 - Balsamiq Wireframes used to draw the wireframes that the website has been based on.
 - GIMP for editing pictures and images
 - GitHub Pages is used for the deployment of the site
-
+- Twine for planning the story
 
 # Features
 
@@ -126,14 +126,24 @@ For the development of this site, the following tools have been used:
 ### Website
 - Showcase of the different games available
 - Footer including business address and social links
+- Summary pages for each game
 
+### Dungeon Crawler Game
+- Party system (Who the player is with)
+- Inventory system (What the player has in their possession)
+- Attribute system (Shows players skills, stats)
+- Map system (Shows the player a map of the world and where they are currently)
+- Class system that determines what options the player has based on their character
 
 ## Implemented Features
 
 
+## Unimplemented Features
+- The party, inventory and attribute systems have not been implemented due to time constraints. They are features that I would like to add to the game in the future.
+- The map system has not been implemented due to time constraints. Producing the map of the world including the local areas that the player is can't fit into the time constraints
+
 
 ## Future/Desired Features
-
 - User Logins
 - Ecommerce, user subscriptions to unlock 'Premium' games
 
@@ -237,6 +247,7 @@ After clicking save, the below message appears confirming that the site has been
 
 ## Media
 - https://www.teahub.io/viewwp/ioxwobJ_copyright-free-images-fantasy/ - Dungeon Crawler Thumbnail background
+- https://wallpapercave.com/fantasy-full-hd-desktop-wallpapers - Index call to action background
 
 
 ## Acknowledgements

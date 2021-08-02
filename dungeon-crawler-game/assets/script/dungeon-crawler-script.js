@@ -123,10 +123,10 @@ const textNodes = [
   },
   {
     id: 3,
-    text: '',
+    text: 'You stumble down the cliffs and make your way to the bottom. Your friend ',
     options: [
       {
-        text: 'You stumble down the cliffs and make your way to the bottom. Your friend ',
+        text: '',
         nextText: 4
       },
       {
