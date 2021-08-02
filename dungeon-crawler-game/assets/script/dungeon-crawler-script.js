@@ -2,9 +2,12 @@ const textElement = document.getElementById('dc-text')
 const optionButtonsElement = document.getElementById('dc-option-buttons')
 
 let state = {}
+let playerClass = ""
+let playerWeapon = ""
 
 function startGame() {
   state = {}
+  playerClass = ""
   showTextNode(1)
   document.getElementById("dc-health-bar").value = 100
   document.getElementById("dc-health-bar").max = 100
@@ -38,6 +41,14 @@ function selectOption(option) {
     return startGame()
   }
   state = Object.assign(state, option.setState)
+  playerClass = option.setClass
+  if (playerClass == "Archer"){
+    playerWeapon = "Bow"
+  } else if(playerClass == "Warrior"){
+    playerWeapon = "Sword"
+  } else{
+    playerWeapon = "Wand"
+  }
   if (option.maxHealthChange == null){
     console.log("no max health change")
   }
@@ -76,51 +87,46 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+    text: 'Your adventure begins at your coming-of-age ceremony. After climbing the forested slopes of Trial Mountain you arrive at an ancient ruined shrine surrounded in engraved monoliths. You must make a decision.',
     options: [
       {
-        text: 'Take the goo',
-        setState: { blueGoo: true },
-        maxHealthChange: 20,
-        healthValue: -200,
+        text: 'Become an Archer',
+        setClass: "Archer",
+        maxHealthChange: 0,
+        healthValue: 0,
         nextText: 2
       },
       {
-        text: 'Leave the goo',
-        maxHealthChange: 10,
-        healthValue: 20,
+        text: 'Become a Warrior',
+        setClass: "Warrior",
+        maxHealthChange: 50,
+        healthValue: 50,
+        nextText: 2
+      },
+      {
+        text: 'Become a Mage',
+        setClass: "Mage",
+        maxHealthChange: -10,
         nextText: 2
       }
     ]
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    text: 'You have chosen to continue your adventure as a ' + playerClass + ". Looking at the foot of the monolith you see a " + playerWeapon + " resting. You claim the weapon as your own.",
     options: [
       {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
-        nextText: 3
-      },
-      {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
-        nextText: 3
-      },
-      {
-        text: 'Ignore the merchant',
+        text: 'Continue',
         nextText: 3
       }
     ]
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: '',
     options: [
       {
-        text: 'Explore the castle',
+        text: 'You stumble down the cliffs and make your way to the bottom. Your friend ',
         nextText: 4
       },
       {
