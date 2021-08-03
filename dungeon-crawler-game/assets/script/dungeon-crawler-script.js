@@ -2,12 +2,9 @@ const textElement = document.getElementById('dc-text')
 const optionButtonsElement = document.getElementById('dc-option-buttons')
 
 let state = {}
-let playerClass = ""
-let playerWeapon = ""
 
 function startGame() {
   state = {}
-  playerClass = ""
   showTextNode(1)
   document.getElementById("dc-health-bar").value = 100
   document.getElementById("dc-health-bar").max = 100
@@ -41,14 +38,7 @@ function selectOption(option) {
     return startGame()
   }
   state = Object.assign(state, option.setState)
-  playerClass = option.setClass
-  if (playerClass == "Archer"){
-    playerWeapon = "Bow"
-  } else if(playerClass == "Warrior"){
-    playerWeapon = "Sword"
-  } else{
-    playerWeapon = "Wand"
-  }
+
   if (option.maxHealthChange == null){
     console.log("no max health change")
   }
@@ -91,81 +81,87 @@ const textNodes = [
     options: [
       {
         text: 'Become an Archer',
-        setClass: "Archer",
+        setState: {Archer: true},
         maxHealthChange: 0,
         healthValue: 0,
         nextText: 2
       },
       {
         text: 'Become a Warrior',
-        setClass: "Warrior",
+        setState: {Warrior: true},
         maxHealthChange: 50,
         healthValue: 50,
-        nextText: 2
+        nextText: 3
       },
       {
         text: 'Become a Mage',
-        setClass: "Mage",
+        setState: {Mage: true},
         maxHealthChange: -10,
-        nextText: 2
+        nextText: 4
+      },
+      {
+        text: 'Become a Rogue',
+        setState: {Rogue: true},
+        maxHealthChange: 20,
+        nextText: 5
       }
     ]
   },
   {
     id: 2,
-    text: 'You have chosen to continue your adventure as a ' + playerClass + ". Looking at the foot of the monolith you see a " + playerWeapon + " resting. You claim the weapon as your own.",
+    text: "You have chosen to continue your adventure as an archer. Looking at the foot of the monolith you see a bow resting on the floor. You claim the weapon as your own.",
     options: [
       {
         text: 'Continue',
-        nextText: 3
-      }
-    ]
-  },
-  {
-    id: 3,
-    text: 'You stumble down the cliffs and make your way to the bottom. Your friend ',
-    options: [
-      {
-        text: '',
-        nextText: 4
-      },
-      {
-        text: 'Find a room to sleep at in the town',
-        nextText: 5
-      },
-      {
-        text: 'Find some hay in a stable to sleep in',
         nextText: 6
       }
     ]
   },
   {
-    id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+    id: 3,
+    text: 'You have chosen the mighty path of the warrior. To the side of the monolith is a sword, stained with blood. You wipe the blade on your pants and claim it as your own.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Continue',
+        nextText: 6
+      },
+    ]
+  },
+  {
+    id: 4,
+    text: 'You chose the path of the mind - the path of a mage. After reflecting on your decision for a moment, you notice a suspicious and large stick on the floor. Upon further inspection, you have found a wand to make your own.',
+    options: [
+      {
+        text: 'Continue',
+        nextText: 6
       }
     ]
   },
   {
     id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+    text: 'After choosing the conniving and scheming path of the rogue, you loot a chest tucked away behind the monolith. It held two daggers, clearly used, for you to make use of.',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Continue',
+        nextText: 6
       }
     ]
   },
   {
     id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+    text: "You traverse back down the mountain, eager to begin your personal journey. You're not entirely sure where to start, even after dreaming about it all your life.",
     options: [
       {
-        text: 'Explore the castle',
+        text: 'Head to the capital',
         nextText: 7
+      },
+      {
+        text: 'Head to the forest',
+        nextText: 101
+      },
+      {
+        text: 'Head to the coast',
+        nextText: 201
       }
     ]
   },
