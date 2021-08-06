@@ -248,6 +248,7 @@ After clicking save, the below message appears confirming that the site has been
 ## Media
 - https://www.teahub.io/viewwp/ioxwobJ_copyright-free-images-fantasy/ - Dungeon Crawler Thumbnail background
 - https://wallpapercave.com/fantasy-full-hd-desktop-wallpapers - Index call to action background
+- Icons provided by FontAwesome
 
 
 ## Acknowledgements
