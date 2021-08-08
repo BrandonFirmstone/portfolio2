@@ -1,3 +1,17 @@
+ /*jshint esversion: 6 */ 
+
+/**
+  *
+  * The concepts in this javascript file came from https://www.youtube.com/watch?v=R1S_NhKkvGA&t=119s.
+  * I adapted the story for my own and put the textNodes into story.js so it's easier to update.
+  * I added healthValues to the options so I can keep track of a character’s health as they progress. 
+  * This allows them to die due based on their choices through the story not due to just one decision.
+  * 
+  * 
+  */
+
+
+
 /**
  * The array of text nodes.
  * Each text node has an ID, text and options.
