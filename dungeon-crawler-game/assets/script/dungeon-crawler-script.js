@@ -12,19 +12,36 @@
 
 
 
-
+/* Sets the textElement variable to the text in the DOM with ID 'dc-text' */
 const textElement = document.getElementById('dc-text');
+/* Sets the optionButtonsElement to the grid of buttons in the DOM with ID 'dc-option-buttons' */
 const optionButtonsElement = document.getElementById('dc-option-buttons');
 
+/* Declares the variable state as an object */
 let state = {};
 
+/**
+ * Function to start the game
+ * 1) Clears the state object variable
+ * 2) Sets the health bar too a value of 100, with a max of 100
+ * 3) Runs the function showTextNode, starting with the first text node
+ */
 function startGame() {
   state = {};
-  showTextNode(1);
   document.getElementById("dc-health-bar").value = 100;
   document.getElementById("dc-health-bar").max = 100;
+  showTextNode(1);
 }
 
+/**
+ * Function to show the next set of story text
+ * 1) Declares the variable textNode as the selected text node from the array of textNodes
+ * 2) sets the text content of textElement as the text inside the textNode object inside the textNodes array
+ * 3) Removes all of the buttons
+ * 4) Displays each option in the form of a button
+ * 5) Adds an event listener to each option, running the selectOption function with the option selected
+ * @param {*} textNodeIndex Selects the text node to be displayed next
+ */
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
   textElement.innerText = textNode.text;
@@ -43,10 +60,23 @@ function showTextNode(textNodeIndex) {
   })
 }
 
+/**
+ * 
+ * @param {*} option The specific option to be shown
+ * @returns if the option hasn't got a required state or what that state is
+ */
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state);
 }
 
+/**
+ * 1) Checks for changes in health value, either adds or removes health, if health is zero or less, the player is dead and shows
+ * a message at the text node 999
+ * 2) Assigns any attributes to the state that are specified in the option
+ * 3) Runs the function showTextNode with the ID of the next text node
+ * @param {*} option the option that has been selected
+ * @returns if the next text node ID is 0 or less, the game starts again
+ */
 function selectOption(option) {
   const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
@@ -75,6 +105,14 @@ function selectOption(option) {
   
 }
 
+/**
+ * The array of text nodes.
+ * Each text node has an ID, text and options.
+ * Each option has text to describe itself as well as a nextText value to declare what text node should be shown next
+ * The options can also have a setState value, adding any attributes required to the player.
+ * It can also have a requiredState value, showing that the option can't be selected unless this condition is met.
+ * The healthValue is how much the player's health bar should be changed. If the player loses health, it's a negative number.
+ */
 const textNodes = [
   {
     id: 1,
@@ -239,4 +277,5 @@ const textNodes = [
   }
 ]
 
+/* Runs the game */
 startGame();
