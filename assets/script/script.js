@@ -25,8 +25,14 @@ function closeNavigationMenu(){
     console.log("closeNavigationMenu ran");
 }
 
-/* https://www.designcise.com/web/tutorial/how-to-force-scroll-to-the-top-of-the-page-on-page-reload-using-javascript */
-window.onbeforeunload = function () {
-    /* Makes most browsers scroll to the top of the page when reloading */
-    window.scrollTo(0, 0);
+/* https://stackoverflow.com/questions/3664381/force-page-scroll-position-to-top-at-page-refresh-in-html */
+/**
+ * If scroll history is true it will set it to manual, if not it will scroll to the top of the page on refresh
+ */
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+} else {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
 }
