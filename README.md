@@ -141,6 +141,7 @@ For the development of this site, the following tools have been used:
 ## Unimplemented Features
 - The party, inventory and attribute systems have not been implemented due to time constraints. They are features that I would like to add to the game in the future.
 - The map system has not been implemented due to time constraints. Producing the map of the world including the local areas that the player is can't fit into the time constraints
+- Initially each game was going to have a summary page about itself, the author and any purchasing/unlocking options. I have left this out because of time constraints. It's unnecessary to have with just a single game at the moment.
 
 
 ## Future/Desired Features
