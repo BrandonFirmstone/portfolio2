@@ -1,3 +1,5 @@
+ /*jshint esversion: 6 */ 
+
 /**
   *
   * The concepts in this javascript file came from https://www.youtube.com/watch?v=R1S_NhKkvGA&t=119s.
@@ -11,78 +13,64 @@
 
 
 
-const textElement = document.getElementById('dc-text')
-const optionButtonsElement = document.getElementById('dc-option-buttons')
+const textElement = document.getElementById('dc-text');
+const optionButtonsElement = document.getElementById('dc-option-buttons');
 
-let state = {}
+let state = {};
 
 function startGame() {
-  state = {}
-  showTextNode(1)
-  document.getElementById("dc-health-bar").value = 100
-  document.getElementById("dc-health-bar").max = 100
+  state = {};
+  showTextNode(1);
+  document.getElementById("dc-health-bar").value = 100;
+  document.getElementById("dc-health-bar").max = 100;
 }
 
 function showTextNode(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  textElement.innerText = textNode.text;
   while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
   textNode.options.forEach(option => {
     if (showOption(option)) {
-      const button = document.createElement('button')
-      button.innerText = option.text
-      button.classList.add('dc-btn')
-      button.addEventListener('click', () => selectOption(option))
-      optionButtonsElement.appendChild(button)
+      const button = document.createElement('button');
+      button.innerText = option.text;
+      button.classList.add('dc-btn');
+      button.addEventListener('click', () => selectOption(option));
+      optionButtonsElement.appendChild(button);
     }
   })
 }
 
 function showOption(option) {
-  return option.requiredState == null || option.requiredState(state)
+  return option.requiredState == null || option.requiredState(state);
 }
 
 function selectOption(option) {
-  const nextTextNodeId = option.nextText
+  const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
-    return startGame()
+    return startGame();
   }
-  state = Object.assign(state, option.setState)
+  state = Object.assign(state, option.setState);
 
-  if (option.maxHealthChange == null){
-    console.log("no max health change")
-  }
-  else{
-    if ((option.maxHealthChange <= 0) && (document.getElementById("dc-health-bar").max === document.getElementById("dc-health-bar").value)){
-      document.getElementById("dc-health-bar").max += option.maxHealthChange
-      console.log("health max reduced")
-      document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
-      console.log("health value reduced to max")
-    }else{
-      document.getElementById("dc-health-bar").max += option.maxHealthChange
-      console.log("health max changed")
-    }
-  }
   if (option.healthValue == null){
-    console.log("no change in health value")
+    console.log("no change in health value");
   }
   else{
     if ((document.getElementById("dc-health-bar").value + option.healthValue) >= document.getElementById("dc-health-bar").max){
-      document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max
-      console.log("Health maxed out")
+      document.getElementById("dc-health-bar").value = document.getElementById("dc-health-bar").max;
+      console.log("Health maxed out");
     }
     else{
-      document.getElementById("dc-health-bar").value += option.healthValue
-      console.log("health changed by" + option.healthValue)
+      document.getElementById("dc-health-bar").value += option.healthValue;
+      console.log("health changed by" + option.healthValue);
     }
   }
   if (document.getElementById("dc-health-bar").value <= 0){
-    showTextNode(999)
+    showTextNode(999);
   }else{
-    showTextNode(nextTextNodeId)
+    showTextNode(nextTextNodeId);
   }
   
 }
@@ -95,27 +83,23 @@ const textNodes = [
       {
         text: 'Become an Archer',
         setState: {Archer: true},
-        maxHealthChange: 0,
         healthValue: 0,
         nextText: 2
       },
       {
         text: 'Become a Warrior',
         setState: {Warrior: true},
-        maxHealthChange: 50,
         healthValue: 50,
         nextText: 3
       },
       {
         text: 'Become a Mage',
         setState: {Mage: true},
-        maxHealthChange: -10,
         nextText: 4
       },
       {
         text: 'Become a Rogue',
         setState: {Rogue: true},
-        maxHealthChange: 20,
         nextText: 5
       }
     ]
