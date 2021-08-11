@@ -1,13 +1,4 @@
-/*
 
-    INFORMATION REGARDING COMMENTS
-    Each line of comments either annotates the line of code below itself or is used
-    for ease of reading. Comments are used to seperate each part of the program into
-    sections. For example, a contact page may have the contact form seperate from the
-    contact details. They may also be used to essentially draw a line between sections
-    to visually seperate them so that it is easier to read
-
-*/
 
 let menuButton = document.getElementById("navigation-toggle");
 menuButton.addEventListener('click', openNavigationMenu);
@@ -36,3 +27,20 @@ if (history.scrollRestoration) {
         window.scrollTo(0, 0);
     }
 }
+
+let modal = document.getElementById("modal-container");
+let modalOpen = document.getElementById("attributions-modal");
+let modalClose = document.getElementById("credits-close");
+
+function showCredits(){
+    modal.style.display = "block";
+}
+
+function hideCredits(){
+    modal.style.display = "none";
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    modalOpen.addEventListener('click', showCredits);
+    modalClose.addEventListener('click', hideCredits);
+});

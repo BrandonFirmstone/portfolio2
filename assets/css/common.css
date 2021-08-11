@@ -108,13 +108,14 @@
         align-items: center;
         width: 100%;
         padding: 10px 20px;
+        overflow: hidden;
     }
     .footer-company-details{
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 20px 0;
-        padding: 0 40px;
+        padding: 0 10px;
         border-right: 1px solid #f5f5f5;
     }
     .footer-icon{
@@ -287,6 +288,40 @@
     padding: 20px;
     font-size: 26px;
 }
+
+#modal-container{
+    display: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: #808080;
+    background-color: rgba(200, 200, 200, 0.5);
+    color: black;
+}
+#credits-modal{
+    background-color: #f5f5f5;
+    margin: 20% auto;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 80vw;
+}
+#credits-close{
+    color: black;
+    float: right;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 1s;
+}
+#credits-close:hover{
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
 /* Responsive Cutoff A */
 @media (max-width: 768px){
     /* Navigation-specific responsive rules */
