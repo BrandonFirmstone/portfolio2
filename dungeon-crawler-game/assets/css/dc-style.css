@@ -65,7 +65,18 @@
 #dc-summary-link a h3:hover{
     color: #ffffff;
 }
-
+#dc-javascript-warning{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px auto;
+    background-color: #ff0000;
+    color: #ffffff;
+    z-index: 9;
+    text-align: center;
+}
 @media (max-width: 768px){
     #dc-container{
         width: 90%;

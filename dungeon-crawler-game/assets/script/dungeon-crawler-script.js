@@ -105,5 +105,13 @@ function selectOption(option) {
   
 }
 
+/**
+ * Hides JavaScript warning when content loads successfully
+ */
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('dc-javascript-warning').style.display = 'none';
+});
+
+
 /* Runs the game */
 startGame();
