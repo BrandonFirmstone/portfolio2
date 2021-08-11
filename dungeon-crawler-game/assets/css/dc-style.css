@@ -55,16 +55,6 @@
     align-items: center;
     justify-content: center;
 }
-#dc-summary-link{
-    margin-top: 110px;
-    padding-left: 20px;
-}
-#dc-summary-link a h3{
-    color: #f5f5f5;
-}
-#dc-summary-link a h3:hover{
-    color: #ffffff;
-}
 #dc-javascript-warning{
     position: absolute;
     display: flex;
