@@ -19,6 +19,7 @@ const optionButtonsElement = document.getElementById('dc-option-buttons');
 
 /* Declares the variable state as an object */
 let state = {};
+let backgroundMusic = "";
 
 /**
  * Function to start the game
@@ -28,6 +29,7 @@ let state = {};
  */
 function startGame() {
   state = {};
+  backgroundMusic = "../music/Adventure.mp3";
   document.getElementById("dc-health-bar").value = 100;
   document.getElementById("dc-health-bar").max = 100;
   showTextNode(1);
@@ -83,7 +85,27 @@ function selectOption(option) {
     return startGame();
   }
   state = Object.assign(state, option.setState);
-
+  
+  if (option.setMusic != null){
+    if (option.setMusic != backgroundMusic){
+      if (option.setMusic === "Adventure"){
+        backgroundMusic = "../music/Adventure.mp3";
+      } else if(option.setMusic === "Tavern"){
+        backgroundMusic = "../music/Tavern.mp3";
+      } else if(option.setMusic === "Battle"){
+        backgroundMusic = "../music/Battle.mp3";
+      } else{
+        backgroundMusic = "../music/Adventure.mp3";
+      }
+    }
+  }
+  if (audioOn === true){
+    backingTrack = new Audio(backgroundMusic);
+    backingTrack.play();
+  } else{
+    backingTrack.pause();
+    backingTrack.currentTime = 0;
+  }
   if (option.healthValue == null){
     console.log("no change in health value");
   }
@@ -112,6 +134,22 @@ document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('dc-javascript-warning').style.display = 'none';
 });
 
+let audioButton = document.createElement("i");
+audioButton.classList.add('audio-setting');
+audioButton.classList.add('fa-volume-up');
+audioButton.classList.add('fa');
+document.getElementById('dc-audio-button').appendChild(audioButton);
 
+audioButton.addEventListener('click', musicSetting);
+let audioOn = false;
+function musicSetting(){
+  if (audioButton.classList.value === "audio-setting fas fa-volume-up"){
+    audioButton.classList.value = 'audio-setting fas fa-volume-mute';
+    audioOn = false;
+  } else{
+    audioButton.classList.value = 'audio-setting fas fa-volume-up';
+    audioOn = true;
+  }
+}
 /* Runs the game */
 startGame();
