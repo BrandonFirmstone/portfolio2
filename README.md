@@ -66,39 +66,66 @@ The audience is old-school gamers and current adventure enthusiasts. Games such 
 
 ### Scope
 The project deadline is 12/08/2021. In order to keep the scope down, the user system will not be implemented. Only one game will be developed for the library. The website will be a basic demonstration of what it will become. 
+The story line should have plenty of options, with many different routes the player could take. The 'epilogue' of the game should be playable. This will lead the player to their first quest. Eventually I would like to add more story and have each branch of the story filled out.
 
 ### Structure
 The website will be structured to display a selection of the games available in the library. It will also link to the library in a call-to-action. The library will be in a tile format, with a thumbnail for each game, a short description underneath and a link to play the game. Each game can have different structures, but the game that will be made for demonstration purposes will be inside of a bordered div, with the text at the top, buttons underneath the text and different icons underneath representing different attributes to be linked to the player (for example, armour, weapons etc) and a health bar. Each game will have it's own directory, in order to keep them separated in a logical and tidy manner.
+
+The game logic is quite vast, and due to time constraints many of the story lines end at either a premature demise or a demo mode message. The original idea was to have the ability to have multiple games within the site, hence the somewhat modular file structure. The site has a common set of assets and assets unique to the game. This would continue to work if other games were added.
 
 ### Skeleton
 #### Wire Frame Designs
 
 ![Game Interface Wireframe](./assets/images/README-images/game-interface-wireframe.png)
 
+The above is the wireframe for the game's interface. Buttons will be used to interact with the game's story, each one having different paths it can lead you down. Four icons will be present for the user's weapons, armor, party and stats. A health bar will be present to keep track of the damage that the user is taking. A map will also be included that track's the player's movements throughout the world.
+
 ![Index Wireframe](./assets/images/README-images/index-wireframe.png)
+
+The index page will have a call to action at the very top leading to a featured game. Below will be thumbnails and descriptions for different games.
 
 ![Settings Modal Wireframe](./assets/images/README-images/settings-modal-wireframe.png)
 
+The settings modal will be used to allow the player to change settings such as audio and accessibility options. Each one will have an icon making it more visually accessible to a user.
+
 ![Library Wireframe](./assets/images/README-images/library-wireframe.png)
+
+The library wireframe above is an idea for how multiple games could be stored and shown to a user. Adding filters and sorts would be nice to have, but the library page may not be implemented at this stage.
 
 ### Surface
 
+![Overall Result](./assets/images/README-images/project-overall.png)
 
+Above is the overall style of the website.
 
+![Game Controls](./assets/images/README-images/game-controls.png)
 
+Above is how the game's inputs and information ended up. The speaker button is used to mute and unmute the game's background music. This music changes depending on the context in the game at the time. For example, battle music will play during a fight scene.
 
+![Responsive Menu](./assets/images/README-images/responsive-menu.png)
 
+The responsive menu uses RGBA to give it's background transparency and includes a fall-back background color incase the browser does not support rgba. It takes up the full height and width of the screen.
+
+![Footer](./assets/images/README-images/page-footers.png)
+
+The footer is a black and white combination using sleek icons from FontAwesome. Each icon grows slightly on hover, indicating it can be clicked.
+
+![Homepage](./assets/images/README-images/homepage-screenshot.png)
+
+The home page features a call to action image using a mysterious fantasy background. The page also features thumbnail images for the game, descriptions of the game and a button linking the user to the game.
 
 # Development
-
-
 
 ## README Purpose
 The README is used in order to convey to the reader the purpose of this website and how it has been developed. Future developers that may work on this site as well as myself can refer to this document to find information regarding the website's current development stage, any bugs and issues found and more. It also means that future developers can keep to the same styles and keep the website consistent.
 
 ## Site Structure
 
+There are two main pages present in the website, index.html (the home page) and dungeon-crawler-game.html (the text-based adventure game's page). Due to this limited number of pages, both pages just link directly to one another.
 
+![File structure](./assets/images/README-images/site-structure.png)
+
+The site's file structure is more complicated, however. As the project initially was going to hold multiple games, each game's assets will have it's own folder. In the case of dungeon crawler, it has the folder dungeon-crawler-game. In the main assets folder, we have a CSS, images and script folder. The images folder breaks down further into game-thumbnails and README-images. This is to keep it organised and easy to search through. The dungeon-crawler-game assets folder has an extra folder - music. This is because each game can have it's own sound effects, background music etc. The index page doesn't need any of these, so no music will be common.
 
 ## Naming Conventions
 The naming conventions for each file within the repository is using lower-case characters and hyphens to separate the words. Classes and IDs in HTML will use this same format. Variables and other names in JavaScript will use camel case (Capitalizing the first letter of each word bar the first word. For example, camelCaseHere.) 
@@ -121,9 +148,8 @@ For the development of this site, the following tools have been used:
 
 # Features
 
-
-
 ## Initial Features Desired
+
 ### Website
 - Showcase of the different games available
 - Footer including business address and social links
@@ -138,24 +164,57 @@ For the development of this site, the following tools have been used:
 
 ## Implemented Features
 
+### Navigation
+
+![Navigation](./assets/images/README-images/responsive-menu.png)
+
+Above is the responsive menu implemented into the website. On smaller screens such as tablets, this will be the primary method of navigation. Using RGBA the background has a slight transparency to it and very smoothly transitions in and out, swiping from left to right.
+
+![Header](./assets/images/README-images/header-screenshot.png)
+
+This is the navigation header, featuring the site's title and two links - Play Game and Home.
+
+### Footer
+
+![Footer](./assets/images/README-images/page-footers.png)
+
+The footer has a few useful features implemented into it. To start, the CC icon on the right/bottom of the footer is used to bring up an acknowledgements modal. Next, the user has access to all of the company's social links. Finally, to comply with UK law, the address needs to be easily accessible on the website. Of course, the address is fake.
+
+### Acknowledgements Modal
+
+![Acknowledgements Modal](./assets/images/README-images/credits-modal.png)
+
+This modal is accessed using the footer's 'See Credits' link. The modal is an overlay on top of the screen, with links to various websites that helped to create this one. The icon is the logo for Creative Commons.
+
+### Home Page
+
+![Home Page](./assets/images/README-images/homepage-chrome.png)
+
+The home page has a sleek looking design and introduces the user to the namesake game. It's animated call to action should help to bring users in.
+
+### Game Page
+
+![Game Page](./assets/images/README-images/game-page.png)
+
+The game page holds the game board for a text based choose your own adventure. Content is dynamically built up by user's interaction based on situational options and based upon the user's initial chosen class. Each class has slightly different personalities, so each play through can be different. The health bar keeps a track of the user's damage. Once it reaches zero, that's game over. This page also includes an audio control - the speaker button at the bottom of the board. The user can use this to pause/unpause the game music. 
+
+### Game Music
+
+The music in the game can change depending upon the situation the player is in. For example, in a fight scene battle music would be playing. The game music is all stored in the dungeon-crawler-game/assets/music folder. The music plays with half volume and has looping enabled due to the limited choice of music.
 
 ## Unimplemented Features
+
 - The party, inventory and attribute systems have not been implemented due to time constraints. They are features that I would like to add to the game in the future.
 - The map system has not been implemented due to time constraints. Producing the map of the world including the local areas that the player is can't fit into the time constraints
 - Initially each game was going to have a summary page about itself, the author and any purchasing/unlocking options. I have left this out because of time constraints. It's unnecessary to have with just a single game at the moment.
 
 
 ## Future/Desired Features
+
 - User Logins
 - Ecommerce, user subscriptions to unlock 'Premium' games
 
 # Testing
-
-
-
-## Validation Testing
-
-
 
 ## Cross Browser and Cross Device Testing
 
@@ -256,4 +315,5 @@ After clicking save, the below message appears confirming that the site has been
 - https://www.w3schools.com/js/js_let.asp for adding {} around code to prevent producing global variables
 - https://www.youtube.com/watch?time_continue=119&v=R1S_NhKkvGA&feature=emb_title&ab_channel=WebDevSimplified helped design game
 - https://www.deviantart.com/sharandra/art/Dungeon-Floor-419227141 dungeon texture
+- https://www.serpentsoundstudios.com/royalty-free-music/celtic-fantasy background music
 - onlineconverter.com for compressing mp3 files
