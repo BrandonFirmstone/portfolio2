@@ -20,7 +20,8 @@ const optionButtonsElement = document.getElementById('dc-option-buttons');
 /* Declares the variable state as an object */
 let state = {};
 let backgroundMusic = "../music/Adventure.mp3";
-let backingTrack = new Audio(backgroundMusic)
+let backingTrack = new Audio(backgroundMusic);
+let currentMusic = "Adventure";
 
 /**
  * Function to start the game
@@ -31,6 +32,10 @@ let backingTrack = new Audio(backgroundMusic)
 function startGame() {
   state = {};
   backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
+  currentMusic = "Adventure";
+  backingTrack.pause();
+  backingTrack = null;
+  backingTrack = new Audio(backgroundMusic);
   document.getElementById("dc-health-bar").value = 100;
   document.getElementById("dc-health-bar").max = 100;
   showTextNode(1);
@@ -87,20 +92,26 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState);
   
-  if (option.setMusic != null){
-    if (option.setMusic != backgroundMusic){
+  if (option.setMusic !== null){
+    if (option.setMusic !== currentMusic){
       if (option.setMusic === "Adventure"){
         backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
+        currentMusic = "Adventure";
       } else if(option.setMusic === "Tavern"){
         backgroundMusic = "./dungeon-crawler-game/assets/music/Tavern.mp3";
+        currentMusic = "Tavern";
       } else if(option.setMusic === "Battle"){
         backgroundMusic = "./dungeon-crawler-game/assets/music/Battle.mp3";
+        currentMusic = "Battle";
       } else{
         backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
+        currentMusic = "Adventure";
       }
     }
   }
   if (audioOn === true){
+    backingTrack.pause();
+    backingTrack = null;
     backingTrack = new Audio(backgroundMusic);
     backingTrack.play();
   } else{
@@ -147,8 +158,10 @@ function musicSetting(){
   if (audioButton.classList.value === "audio-setting fas fa-volume-up"){
     audioButton.classList.value = 'audio-setting fas fa-volume-mute';
     audioOn = false;
+    backingTrack.pause();
   } else{
     audioButton.classList.value = 'audio-setting fas fa-volume-up';
+    backingTrack.play();
     audioOn = true;
   }
 }

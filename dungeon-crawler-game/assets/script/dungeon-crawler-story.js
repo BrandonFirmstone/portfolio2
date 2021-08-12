@@ -28,7 +28,6 @@
         {
           text: 'Become an Archer',
           setState: {Archer: true},
-          setMusic = "Adventure",
           healthValue: 0,
           nextText: 2
         },
