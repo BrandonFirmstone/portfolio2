@@ -165,20 +165,18 @@ For the development of this site, the following tools have been used:
 
 
 ## Known Fixed Bugs
-- 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
-
 
 ### Aesthetic Bugs
+
 - 12/08/2021 - There's a slight wobble left to right on mobile view. Nothing seems to exceed the width of the screen, but even adding `overflow-x: hidden !important` hasn't fixed the issue. UPDATE: After restarting my browser it now works as expected.
 
 
 ### Functional Bugs
 
+- 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
 
 
 ## Known Unfixed Bugs
-
-
 
 ### Aesthetic Bugs
 
