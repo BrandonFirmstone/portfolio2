@@ -407,3 +407,4 @@ After clicking save, the below message appears confirming that the site has been
 - https://www.serpentsoundstudios.com/royalty-free-music/celtic-fantasy background music
 - onlineconverter.com for compressing mp3 files
 - Favicon made by Freepik from www.flaticon.com
+- https://www.link-assistant.com/blog/hiding-from-indexation-part-1/ helped with search engine indexing
