@@ -70,7 +70,7 @@
        button.addEventListener('click', () => selectOption(option));
        optionButtonsElement.appendChild(button);
      }
-   })
+   });
  }
 
  /**
