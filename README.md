@@ -406,3 +406,4 @@ After clicking save, the below message appears confirming that the site has been
 - https://www.deviantart.com/sharandra/art/Dungeon-Floor-419227141 dungeon texture
 - https://www.serpentsoundstudios.com/royalty-free-music/celtic-fantasy background music
 - onlineconverter.com for compressing mp3 files
+- Favicon made by Freepik from www.flaticon.com
