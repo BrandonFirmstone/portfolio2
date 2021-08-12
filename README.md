@@ -325,27 +325,27 @@ The above error is shown because I used a value of auto in padding. To fix this,
 - 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
 - 12/08/2021 - 'Play a game' button in 404.html took you to an unusual place in the repository, meaning the CSS and page did not load properly. To fix this, I changed the link that the button took you to.
 
-## Known Unfixed Bugs
-
-### Aesthetic Bugs
-
-
-
-### Functional Bugs
-
-
-
 # Accessibility
 
+## Lighthouse Audit Results
 
+### Index
 
-## Features
+![Index Result](./assets/images/README-images/lighthouse-audit-index.png)
 
+### Game
 
+![Game Result](./assets/images/README-images/lighthouse-audit-game.png)
+
+### 404
+
+![404 Result](./assets/images/README-images/lighthouse-audit-404.png)
+
+All of the results above are all very close to each other and don't vary massively. The score for accessibility is definitely within a safe margin.
 
 ## Issues
 
-
+An issue that did arise is that there are no aria-labels on the hamburger buttons. This means users that use screen readers may struggle to understand what it is. To fix this, I've added aria-labels with a value of 'open navigation menu'
 
 ## Testing
 
