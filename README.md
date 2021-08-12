@@ -218,11 +218,136 @@ The music in the game can change depending upon the situation the player is in. 
 
 ## Cross Browser and Cross Device Testing
 
-
+<table>
+<thead>
+  <tr>
+    <th>Device</th>
+    <th>Screen Size (px)</th>
+    <th>Operating System</th>
+    <th>Browser</th>
+    <th>Browser Version</th>
+    <th>Page Tested</th>
+    <th>Results</th>
+    <th>Comments</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Oppo Find X2 Lite</td>
+    <td>1080x2400</td>
+    <td>Android 11</td>
+    <td>Chrome</td>
+    <td>92.0.4515.131</td>
+    <td>Index.html</td>
+    <td>Fail</td>
+    <td>Footer address text-aligned to the left, looks unusual</td>
+  </tr>
+  <tr>
+    <td>Oppo Find X2 Lite</td>
+    <td>1080x2400</td>
+    <td>Android 11</td>
+    <td>Chrome</td>
+    <td>92.0.4515.131</td>
+    <td>Index.html</td>
+    <td>Pass</td>
+    <td>Footer address looks better with changes</td>
+  </tr>
+  <tr>
+    <td>Oppo Find X2 Lite</td>
+    <td>1080x2400</td>
+    <td>Android 11</td>
+    <td>Opera</td>
+    <td>64.2.3282.60128</td>
+    <td>dungeon-crawler-game.html</td>
+    <td>Pass</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HP Omen Laptop</td>
+    <td>1920x1080</td>
+    <td>Windows 10</td>
+    <td>Chrome</td>
+    <td>92.0.4515.131</td>
+    <td>Index.html</td>
+    <td>Pass</td>
+    <td>Can be quite slow to load - could be my internet connection though</td>
+  </tr>
+  <tr>
+    <td>HP Omen Laptop</td>
+    <td>1920x1080</td>
+    <td>Windows 10</td>
+    <td>Edge</td>
+    <td>92.0.902.67</td>
+    <td>Index.html</td>
+    <td>Pass</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HP Omen Laptop</td>
+    <td>1920x1080</td>
+    <td>Windows 10</td>
+    <td>Edge</td>
+    <td>92.0.902.67</td>
+    <td>dungeon-crawler-game.html</td>
+    <td>Pass</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HP Omen Laptop</td>
+    <td>1920x1080</td>
+    <td>Windows 10</td>
+    <td>Edge</td>
+    <td>92.0.902.67</td>
+    <td>404.html</td>
+    <td>Pass</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>HP Omen Laptop</td>
+    <td>1920x1080</td>
+    <td>Windows 10</td>
+    <td>IE</td>
+    <td>21H1</td>
+    <td>dungeon-crawler-game.html</td>
+    <td>Pass</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
 ## Manual Testing
 
-
+<table>
+<thead>
+  <tr>
+    <th>Task/Function</th>
+    <th>Result</th>
+    <th>Comments</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Can you play through the current game?</td>
+    <td>Pass</td>
+    <td>The game does run as intended, meaning the user can get the full experience</td>
+  </tr>
+  <tr>
+    <td>Does every animation work?</td>
+    <td>Pass</td>
+    <td>Animations work successfully on desktop and larger devices on hover, but on touchscreen devices the animation only plays when they are selected.</td>
+  </tr>
+  <tr>
+    <td>Does every navigation link work?</td>
+    <td>Pass</td>
+    <td>Every navigation link works, but I have noticed that on the 404.html and dungeon-crawler-game.html pages the site title doesn't navigate you to the home page.</td>
+  </tr>
+  <tr>
+    <td>Does the music play correctly?</td>
+    <td>Pass</td>
+    <td>The music does play correctly throughout the game.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Known Fixed Bugs
 
