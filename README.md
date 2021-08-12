@@ -275,6 +275,19 @@ The above error is caused by the max-height and height value of auto in common.c
 
 The above error is shown because I used a value of auto in padding. To fix this, I removed the auto value.
 
+### Validator summary
+
+| Validation Failures                           | Errors                                                                                                                                                                                                 |
+|-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **JSHINT** dungeon-crawler-script.js          | missing semi colon on line 73                                                                                                                                                                          |
+| **JSHINT** dungeon-crawler-story.js           | Missing a semi colon on Line 665                                                                                                                                                                       |
+| **JSHINT** common.js                          | Need to add <br>/*jshint esversion: 6 */<br> to the top to suppress let messaging<br>Missing a semi colon on Line 61                                                                                   |
+| **Nu HTML Checker** index.html                | Element a not allowed as a child of element u<br>An img element must have an alt attribute                                                                                                             |
+| **Nu HTML Checker** dungeon-crawler-game.html | Element a not allowed as a child of element u<br>Attribute name not allowed on element progress bar<br>The value of the for attribute of the label element must be the ID of a non-hidden form control |
+| **Nu HTML Checker** 404.html                  | Element a not allowed as a child of element u<br>Stray end tag input                                                                                                                                   |
+| **JIGSAW** common.css                         | 381<br>	<br>.game-summary<br>	<br>Value Error : max-height Too many values or values are not recognized : auto                                                                                           |
+| **JIGSAW** dc-style.css                       | 64<br>	<br>#dc-javascript-warning<br>	<br>Value Error : padding auto is not a padding value : 50px auto                                                                                                  |
+
 
 ## Cross Browser and Cross Device Testing
 
