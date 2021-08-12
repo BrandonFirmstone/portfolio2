@@ -10,174 +10,212 @@
 */
 
 /* Style applicable to every page */
-    /* Imported Fonts (from Google Fonts) */
-    @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@1,700&display=swap');
+/* Imported Fonts (from Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@1,700&display=swap');
 
-    *, *::before, *::after{
-        box-sizing:border-box;
-    }
-    body{
-        overflow-x: hidden !important;
-    }
-    /* Style applicable to the header */
-    .header{
-        display: flex;
-        width: 100%;
-        max-width: 100vw;
-        height: 100px;
-        max-height: 100px;
-        height: fit-content;
-        padding: 10px;
-        background-color: #808080;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
-        position: fixed;
-        top: 0;
-    }
-    a, a:link, a:visited{
-        text-decoration: none;
-        color: black;
-    }
-    .dropdown-wrapper{
-        display: none;
-    }
-    #menu{
-        display: none;
-    }
-    i.burger-button{
-        display: none;
-    }
-    .navigation-list{
-        list-style-type: none;
-        display: inline-flex;
-        padding: 20px;
-    }
-    .navigation-item{
-        margin: 20px;
-        transition: 0.5s;
-    }
-    .navigation-item:hover, .navigation-item:active{
-        color: white;
-    }
-    #overlay{
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 9;
-        background-color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0.6);
-        overflow-x: hidden;
-        transition: 0.5s;
-        color: #ffffff;
-    }
-    .overlay-menu{
-        position: relative;
-        top: 25%;
-        width: 100%; 
-        text-align: center;
-        margin-top: 30px;
-    }
-    #overlay a{
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: #f5f5f5;
-        display: block; /* Display block instead of inline */
-        transition: 0.3s; /* Transition effects on hover (color) */
-    }
-    #overlay a:hover, #overlay a:focus {
-        color: #ffffff;
-    }
-    .navigation-toggle{
-        padding: 10px;
-        height: 75px;
-        width: 85px;
-        z-index: 8;
-    }
-      /* Position the close button (top right corner) */
-    #overlay #overlay-close {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
-    }
-    .page-footer{
-        display: flex;
-        flex: 1 1 0px;
-        background-color: black;
-        color: white;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 10px 20px;
-        overflow: hidden;
-    }
-    .footer-company-details{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px 0;
-        padding: 0 10px;
-        border-right: 1px solid #f5f5f5;
-    }
-    .footer-icon{
-        font-size: 22px;
-        transition: 1s;
-    }
-    .footer-icon:hover, .footer-icon:active{
-        font-size: 30px;
-    }
-    .footer-address{
-        padding: 0 20px;
-    }
-    .footer-social-links{
-        display: flex;
-        text-decoration: none;
-        color: white;
-    }
-    
-    .social-link{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    .social-link a{
-        color: white;
-        text-decoration: none;
-    }
-    .company-details{
-        padding: 0 20px;
-    }
-    /* Style applicable to the body */
-    body, html{
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-        height: fit-content;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        background-color: #f5f5f5;
-        font-size: 20px;
-    }
-    /* Other style rules */
-    *{
-        box-sizing: border-box;
-    }
-    .site-title{
-        margin: 0;
-        font-size: 46px;
-        font-family: 'Gentium Book Basic', serif;
-    }
-    .mobile-only{
-        display: none;
-    }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden !important;
+}
+
+/* Style applicable to the header */
+.header {
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    height: 100px;
+    max-height: 100px;
+    height: fit-content;
+    padding: 10px;
+    background-color: #808080;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-wrapper {
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+i.burger-button {
+    display: none;
+}
+
+.navigation-list {
+    list-style-type: none;
+    display: inline-flex;
+    padding: 20px;
+}
+
+.navigation-item {
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.navigation-item:hover,
+.navigation-item:active {
+    color: white;
+}
+
+#overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.overlay-menu {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f5f5f5;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+#overlay a:hover,
+#overlay a:focus {
+    color: #ffffff;
+}
+
+.navigation-toggle {
+    padding: 10px;
+    height: 75px;
+    width: 85px;
+    z-index: 8;
+}
+
+/* Position the close button (top right corner) */
+#overlay #overlay-close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.page-footer {
+    display: flex;
+    flex: 1 1 0px;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.footer-company-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-right: 1px solid #f5f5f5;
+}
+
+.footer-icon {
+    font-size: 22px;
+    transition: 1s;
+}
+
+.footer-icon:hover,
+.footer-icon:active {
+    font-size: 30px;
+}
+
+.footer-address {
+    padding: 0 20px;
+}
+
+.footer-social-links {
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.company-details {
+    padding: 0 20px;
+}
+
+/* Style applicable to the body */
+body,
+html {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+    font-size: 20px;
+}
+
+/* Other style rules */
+* {
+    box-sizing: border-box;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 46px;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+.mobile-only {
+    display: none;
+}
+
 /* End of section
 
 /* Style applicable to index.html */
-#index-call-to-action{
+#index-call-to-action {
     margin-top: 100px;
     width: 100%;
     height: 300px;
@@ -190,7 +228,7 @@
     object-fit: cover;
 }
 
-#call-to-action-caption{
+#call-to-action-caption {
     color: #f5f5f5;
     display: flex;
     height: auto;
@@ -202,21 +240,25 @@
     align-content: center;
     margin: 40px 0 40px 0;
 }
-#call-to-action-caption > a{
+
+#call-to-action-caption>a {
     color: #f5f5f5;
     transition: 0.5s;
 }
-#call-to-action-caption a:hover{
+
+#call-to-action-caption a:hover {
     font-size: larger;
 }
-.game-summary{
+
+.game-summary {
     width: 100%;
     height: auto;
     display: flex;
     overflow-y: hidden;
     margin: 20px 0;
 }
-.game-summary-button{
+
+.game-summary-button {
     border-radius: 15px;
     height: 30px;
     box-shadow: 5px 5px 5px black;
@@ -224,7 +266,9 @@
     transition: 0.5s;
     border: 1px solid black;
 }
-.game-summary-button:hover, .game-summary-button:active{
+
+.game-summary-button:hover,
+.game-summary-button:active {
     font-size: 24px;
     box-shadow: -5px -5px 5px black;
     height: 40px;
@@ -233,35 +277,42 @@
     background-color: black;
     border: 1px solid white;
 }
-.left-align{
+
+.left-align {
     text-align: left;
     margin-right: 25px;
 }
-.right-align{
+
+.right-align {
     text-align: right;
     margin-left: 25px;
 }
-.game-thumbnail{
+
+.game-thumbnail {
     width: 400px;
     height: 400px;
     margin: 25px;
 }
-.game-thumbnail-right{
+
+.game-thumbnail-right {
     margin-right: 50px;
 }
-#site-introduction{
+
+#site-introduction {
     text-align: center;
     padding: 10px 15px;
 }
-#introduction-title{
+
+#introduction-title {
     font-size: 38px;
     margin: 10px 0;
 }
+
 /* End of section */
 
 /* Style applicable to 404.html */
 
-#fnf-content{
+#fnf-content {
     height: 100%;
     width: 80%;
     margin: 200px auto;
@@ -271,11 +322,13 @@
     align-items: center;
     text-align: center;
 }
-#fnf-buttons{
+
+#fnf-buttons {
     display: grid;
     grid-template-columns: repeat(2, auto);
 }
-#fnf-buttons form input{
+
+#fnf-buttons form input {
     padding: 10px;
     font-size: 22px;
     color: #f5f5f5;
@@ -283,16 +336,17 @@
     margin: 50px;
     border: 1px solid #808080;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
     transition: 1s;
 }
-#fnf-buttons form input:hover{
+
+#fnf-buttons form input:hover {
     padding: 20px;
     font-size: 26px;
 }
 
-#modal-container{
+#modal-container {
     display: none;
     position: fixed;
     z-index: 9;
@@ -305,7 +359,8 @@
     background-color: rgba(200, 200, 200, 0.5);
     color: black;
 }
-#credits-modal{
+
+#credits-modal {
     background-color: #f5f5f5;
     margin: 20% auto;
     padding: 25px;
@@ -313,69 +368,86 @@
     border-radius: 15px;
     width: 80vw;
 }
-#credits-modal a{
-    text-decoration:underline;
+
+#credits-modal a {
+    text-decoration: underline;
 }
-#credits-modal #credits-close{
+
+#credits-modal #credits-close {
     color: black;
     float: right;
     font-size: 30px;
     text-decoration: none;
     transition: 1s;
 }
-#credits-close:hover{
+
+#credits-close:hover {
     cursor: pointer;
     transform: rotate(180deg);
 }
 
 /* Responsive Cutoff A */
-@media (max-width: 768px){
+@media (max-width: 768px) {
+
     /* Navigation-specific responsive rules */
-    .desktop-only{
+    .desktop-only {
         display: none;
     }
-    .mobile-only{
+
+    .mobile-only {
         display: inline-block;
     }
-    .site-title{
+
+    .site-title {
         padding: 5px;
     }
-    .navigation-item{
+
+    .navigation-item {
         display: none;
     }
-    .navigation-list{
+
+    .navigation-list {
         display: none;
     }
-    .dropdown-button{
+
+    .dropdown-button {
         z-index: 2;
     }
+
     i.burger-button {
-	    display: inline-block;
-	    color: black;
-	    font-size: 40px;
+        display: inline-block;
+        color: black;
+        font-size: 40px;
         padding: 20px 10px 20px 10px;
         transition: 0.5s;
     }
-    i.burger-button:hover, i.burger-button:active{
+
+    i.burger-button:hover,
+    i.burger-button:active {
         color: white;
     }
-    .nav{
+
+    .nav {
         display: flex;
         object-position: center;
     }
-    #navigation-toggle{
+
+    #navigation-toggle {
         width: 75px;
         height: 85px;
     }
-    .navigation{
+
+    .navigation {
         padding: 25px;
         margin: 10px;
     }
+
     /* Index specific responsive rules */
-    #index-call-to-action{
+    #index-call-to-action {
         font-size: smaller;
     }
-    .game-summary{
+
+    .game-summary {
         width: 100%;
         height: auto;
         max-height: auto;
@@ -388,23 +460,28 @@
         margin: 0 0 40px 0;
         padding: 0 25px;
     }
-    .game-thumbnail{
+
+    .game-thumbnail {
         width: 90%;
         height: auto;
         margin: 10px 10px;
     }
-    .page-footer{
+
+    .page-footer {
         flex-direction: column;
     }
-    .footer-company-details{
+
+    .footer-company-details {
         flex-direction: column;
         border-right: 0;
         border-bottom: 1px solid #f5f5f5;
     }
-    .footer-address{
+
+    .footer-address {
         text-align: center;
     }
 }
+
 /* */
 /* End of section */
 

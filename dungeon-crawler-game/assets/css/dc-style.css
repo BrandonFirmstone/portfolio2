@@ -1,10 +1,10 @@
-#dc-body{
+#dc-body {
     background-image: url("../images/dungeon-texture.png");
     background-repeat: repeat;
     width: 100%;
 }
 
-#dc-container{
+#dc-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,16 +18,18 @@
     border-radius: 50px;
     box-shadow: 0 0 10px 2px black;
 }
-#dc-option-buttons{
+
+#dc-option-buttons {
     display: grid;
     margin: 20px;
     gap: 10px;
     grid-template-columns: repeat(4, auto);
     font-size: 22px;
 }
-.dc-btn{
+
+.dc-btn {
     color: black;
-    background-color: hsl(0,0%,80%);
+    background-color: hsl(0, 0%, 80%);
     border: 2px solid gray;
     padding: 30px;
     font-size: 22px;
@@ -35,27 +37,32 @@
     transition: 0.5s;
     box-shadow: 2px 2px 5px 1px black;
 }
-.dc-btn:hover, .dc-btn:active{
+
+.dc-btn:hover,
+.dc-btn:active {
     border-color: black;
-    background-color: hsl(0,0%,100%)
+    background-color: hsl(0, 0%, 100%)
 }
 
-#dc-health-bar{
+#dc-health-bar {
     margin: 20px;
     width: 60%;
     height: 30px;
     background: #ff0000;
 }
-#dc-health-label{
+
+#dc-health-label {
     margin: 0 auto;
 }
-#dc-health{
+
+#dc-health {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#dc-javascript-warning{
+
+#dc-javascript-warning {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -67,42 +74,52 @@
     z-index: 9;
     text-align: center;
 }
-#dc-settings.audio-setting{
+
+#dc-settings.audio-setting {
     display: block;
     font-size: 60px;
     transition: 0.2s;
 }
-#dc-settings.audio-setting:hover{
+
+#dc-settings.audio-setting:hover {
     color: white;
 }
-@media (max-width: 1080px){
-    #dc-option-buttons{
+
+@media (max-width: 1080px) {
+    #dc-option-buttons {
         grid-template-columns: repeat(2, auto);
     }
 }
-@media (max-width: 768px){
-    #dc-container{
+
+@media (max-width: 768px) {
+    #dc-container {
         width: 90%;
     }
-    #dc-text{
+
+    #dc-text {
         font-size: 22px;
         text-align: center;
     }
-    .dc-btn{
+
+    .dc-btn {
         padding: 15px;
     }
-    #dc-stats{
+
+    #dc-stats {
         width: 100%;
         font-size: 22px;
         margin: 10px auto;
     }
-    #dc-option-buttons{
+
+    #dc-option-buttons {
         grid-template-columns: repeat(1, auto);
     }
-    #dc-health-bar{
+
+    #dc-health-bar {
         width: 80%;
     }
-    #dc-health{
+
+    #dc-health {
         flex-direction: column;
     }
 }

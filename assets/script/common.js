@@ -1,4 +1,3 @@
-
 let menuButton = document.getElementById("navigation-toggle");
 let closeMenuButton = document.getElementById("overlay-close");
 
@@ -10,14 +9,14 @@ let modalClose = document.getElementById("credits-close");
 /**
  * Opens the navigation menu by setting the width to 100%
  */
-function openNavigationMenu(){
+function openNavigationMenu() {
     document.getElementById("overlay").style.width = "100%";
 }
 
 /**
  * Closes the navigation menu by giving it a width of 0
  */
-function closeNavigationMenu(){
+function closeNavigationMenu() {
     document.getElementById("overlay").style.width = "0";
 }
 
@@ -26,14 +25,14 @@ function closeNavigationMenu(){
  * https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
  * Link above helped with making modal. 
  */
-function showCredits(){
+function showCredits() {
     modal.style.display = "block";
 }
 
 /**
  * Hides the credit modal by setting the display to none
  */
-function hideCredits(){
+function hideCredits() {
     modal.style.display = "none";
 }
 
@@ -53,7 +52,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
  * If scroll history is true it will set it to manual, if not it will scroll to the top of the page on refresh
  * Source: https://stackoverflow.com/questions/3664381/force-page-scroll-position-to-top-at-page-refresh-in-html
  */
- if (history.scrollRestoration) {
+if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
 } else {
     window.onbeforeunload = function () {
