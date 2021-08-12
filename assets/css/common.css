@@ -16,6 +16,9 @@
     *, *::before, *::after{
         box-sizing:border-box;
     }
+    body{
+        overflow-x: hidden !important;
+    }
     /* Style applicable to the header */
     .header{
         display: flex;
@@ -330,6 +333,9 @@
     }
     .mobile-only{
         display: inline-block;
+    }
+    .site-title{
+        padding: 5px;
     }
     .navigation-item{
         display: none;
