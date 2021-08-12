@@ -114,13 +114,13 @@
          text: 'Head to the coast',
          nextText: 1000,
          healthValue: -90,
-         setMusic: "Battle"
+         setMusic: "battle"
        },
        {
          text: 'Head to the forest',
          healthValue: -40,
          nextText: 2000,
-         setMusic: "Battle"
+         setMusic: "battle"
        }
      ]
    },
@@ -130,7 +130,7 @@
      options: [{
        text: 'Continue',
        nextText: 11,
-       setMusic: "Tavern"
+       setMusic: "tavern"
      }]
    },
    {
@@ -139,7 +139,7 @@
      options: [{
        text: 'Continue',
        nextText: 11,
-       setMusic: "Tavern"
+       setMusic: "tavern"
      }]
    },
    {
@@ -148,7 +148,7 @@
      options: [{
        text: 'Continue',
        nextText: 11,
-       setMusic: "Tavern"
+       setMusic: "tavern"
      }]
    },
    {
@@ -157,7 +157,7 @@
      options: [{
        text: 'Continue',
        nextText: 11,
-       setMusic: "Tavern"
+       setMusic: "tavern"
      }]
    },
    {
@@ -328,7 +328,7 @@
        {
          text: "''That's too bad''",
          nextText: 28,
-         setMusic: "Battle"
+         setMusic: "battle"
        }
      ]
    },
@@ -365,7 +365,7 @@
          text: "Reason with him",
          requiredState: (currentState) => currentState.Archer,
          nextText: 35,
-         setMusic: "Tavern"
+         setMusic: "tavern"
        }
      ]
    },
@@ -474,7 +474,7 @@
      options: [{
        text: "Continue",
        nextText: 51,
-       setMusic: "Adventure"
+       setMusic: "adventure"
      }]
    },
    {

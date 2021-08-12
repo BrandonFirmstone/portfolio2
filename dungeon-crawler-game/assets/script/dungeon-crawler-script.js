@@ -21,7 +21,7 @@
  let state = {};
  let backgroundMusic = "";
  let backingTrack = new Audio(backgroundMusic);
- let currentMusic = "Adventure";
+ let currentMusic = "adventure";
 
  /**
   * Function to start the game
@@ -36,8 +36,8 @@
      backingTrack.loop = true;
    }
    state = {};
-   backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
-   currentMusic = "Adventure";
+   backgroundMusic = "./dungeon-crawler-game/assets/music/adventure.mp3";
+   currentMusic = "adventure";
    backingTrack.pause();
    backingTrack = null;
    backingTrack = new Audio(backgroundMusic);
@@ -100,18 +100,18 @@
 
    if (option.setMusic !== null && typeof (option.setMusic) !== 'undefined') {
      if (option.setMusic !== currentMusic) {
-       if (option.setMusic === "Adventure") {
-         backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
-         currentMusic = "Adventure";
-       } else if (option.setMusic === "Tavern") {
-         backgroundMusic = "./dungeon-crawler-game/assets/music/Tavern.mp3";
-         currentMusic = "Tavern";
-       } else if (option.setMusic === "Battle") {
-         backgroundMusic = "./dungeon-crawler-game/assets/music/Battle.mp3";
-         currentMusic = "Battle";
+       if (option.setMusic === "adventure") {
+         backgroundMusic = "./dungeon-crawler-game/assets/music/adventure.mp3";
+         currentMusic = "adventure";
+       } else if (option.setMusic === "tavern") {
+         backgroundMusic = "./dungeon-crawler-game/assets/music/tavern.mp3";
+         currentMusic = "tavern";
+       } else if (option.setMusic === "battle") {
+         backgroundMusic = "./dungeon-crawler-game/assets/music/battle.mp3";
+         currentMusic = "battle";
        } else {
-         backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
-         currentMusic = "Adventure";
+         backgroundMusic = "./dungeon-crawler-game/assets/music/adventure.mp3";
+         currentMusic = "adventure";
        }
      }
      if (audioOn === true) {
