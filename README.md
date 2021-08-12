@@ -313,17 +313,18 @@ The above error is shown because I used a value of auto in padding. To fix this,
 | Does the music play correctly?         | Pass   | The music does play correctly throughout the game.                                                                                                             |
 
 
-## Known Fixed Bugs
+## Known Bugs
 
 ### Aesthetic Bugs
 
-- 12/08/2021 - There's a slight wobble left to right on mobile view. Nothing seems to exceed the width of the screen, but even adding `overflow-x: hidden !important` hasn't fixed the issue. UPDATE: After restarting my browser it now works as expected.
+- 12/08/2021 - There's a slight wobble left to right on mobile view. Nothing seems to exceed the width of the screen, but even adding `overflow-x: hidden !important` hasn't fixed the issue. UPDATE: After restarting my browser it now works as expected. - FIXED
 
 
 ### Functional Bugs
 
 - 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
-- 12/08/2021 - 'Play a game' button in 404.html took you to an unusual place in the repository, meaning the CSS and page did not load properly. To fix this, I changed the link that the button took you to.
+- 12/08/2021 - 'Play a game' button in 404.html took you to an unusual place in the repository, meaning the CSS and page did not load properly. To fix this, I changed the link that the button took you to. - FIXED
+- 12/08/2021 - Once you have to restart the game, the audio stops. In order to start it again, you have to turn off and on the audio. - UNFIXED
 
 # Accessibility
 
