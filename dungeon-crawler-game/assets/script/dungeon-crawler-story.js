@@ -28,6 +28,7 @@
         {
           text: 'Become an Archer',
           setState: {Archer: true},
+          setMusic = "Adventure",
           healthValue: 0,
           nextText: 2
         },
@@ -116,12 +117,14 @@
         {
           text: 'Head to the coast',
           nextText: 1000,
-          healthValue: -90
+          healthValue: -90,
+          setMusic: "Battle"
         },
         {
           text: 'Head to the forest',
           healthValue: -40,
-          nextText: 2000
+          nextText: 2000,
+          setMusic: "Battle"
         }
       ]
     },
@@ -131,7 +134,8 @@
       options: [
         {
           text: 'Continue',
-          nextText: 11
+          nextText: 11,
+          setMusic: "Tavern"
         }
       ]
     },
@@ -141,7 +145,8 @@
       options: [
         {
           text: 'Continue',
-          nextText: 11
+          nextText: 11,
+          setMusic: "Tavern"
         }
       ]
     },
@@ -151,7 +156,8 @@
       options: [
         {
           text: 'Continue',
-          nextText: 11
+          nextText: 11,
+          setMusic: "Tavern"
         }
       ]
     },
@@ -161,7 +167,8 @@
       options: [
         {
           text: 'Continue',
-          nextText: 11
+          nextText: 11,
+          setMusic: "Tavern"
         }
       ]
     },
@@ -356,7 +363,8 @@
         },
         {
           text: "''That's too bad''",
-          nextText: 28
+          nextText: 28,
+          setMusic: "Battle"
         }
       ]
     },
@@ -393,7 +401,8 @@
         {
           text: "Reason with him",
           requiredState: (currentState) => currentState.Archer,
-          nextText: 35
+          nextText: 35,
+          setMusic: "Tavern"
         }
       ]
     },
@@ -517,7 +526,8 @@
       options: [
         {
           text: "Continue",
-          nextText: 51
+          nextText: 51,
+          setMusic: "Adventure"
         }
       ]
     },

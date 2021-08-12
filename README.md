@@ -257,3 +257,4 @@ After clicking save, the below message appears confirming that the site has been
 - https://www.w3schools.com/js/js_let.asp for adding {} around code to prevent producing global variables
 - https://www.youtube.com/watch?time_continue=119&v=R1S_NhKkvGA&feature=emb_title&ab_channel=WebDevSimplified helped design game
 - https://www.deviantart.com/sharandra/art/Dungeon-Floor-419227141 dungeon texture
+- onlineconverter.com for compressing mp3 files

@@ -19,7 +19,8 @@ const optionButtonsElement = document.getElementById('dc-option-buttons');
 
 /* Declares the variable state as an object */
 let state = {};
-let backgroundMusic = "";
+let backgroundMusic = "../music/Adventure.mp3";
+let backingTrack = new Audio(backgroundMusic)
 
 /**
  * Function to start the game
@@ -29,7 +30,7 @@ let backgroundMusic = "";
  */
 function startGame() {
   state = {};
-  backgroundMusic = "../music/Adventure.mp3";
+  backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
   document.getElementById("dc-health-bar").value = 100;
   document.getElementById("dc-health-bar").max = 100;
   showTextNode(1);
@@ -89,13 +90,13 @@ function selectOption(option) {
   if (option.setMusic != null){
     if (option.setMusic != backgroundMusic){
       if (option.setMusic === "Adventure"){
-        backgroundMusic = "../music/Adventure.mp3";
+        backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
       } else if(option.setMusic === "Tavern"){
-        backgroundMusic = "../music/Tavern.mp3";
+        backgroundMusic = "./dungeon-crawler-game/assets/music/Tavern.mp3";
       } else if(option.setMusic === "Battle"){
-        backgroundMusic = "../music/Battle.mp3";
+        backgroundMusic = "./dungeon-crawler-game/assets/music/Battle.mp3";
       } else{
-        backgroundMusic = "../music/Adventure.mp3";
+        backgroundMusic = "./dungeon-crawler-game/assets/music/Adventure.mp3";
       }
     }
   }
@@ -136,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 let audioButton = document.createElement("i");
 audioButton.classList.add('audio-setting');
-audioButton.classList.add('fa-volume-up');
+audioButton.classList.add('fa-volume-mute');
 audioButton.classList.add('fa');
 document.getElementById('dc-audio-button').appendChild(audioButton);
 
