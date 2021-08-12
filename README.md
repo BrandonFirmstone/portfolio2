@@ -165,7 +165,7 @@ For the development of this site, the following tools have been used:
 
 
 ## Known Fixed Bugs
-
+- 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
 
 
 ### Aesthetic Bugs
@@ -177,7 +177,7 @@ For the development of this site, the following tools have been used:
 
 
 ## Known Unfixed Bugs
-- 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click.
+
 
 
 ### Aesthetic Bugs
