@@ -169,7 +169,7 @@ For the development of this site, the following tools have been used:
 
 
 ### Aesthetic Bugs
-- 12/08/2021 - There's a slight wobble left to right on mobile view. Nothing seems to exceed the width of the screen, but even adding `overflow-x: hidden !important` hasn't fixed the issue.
+- 12/08/2021 - There's a slight wobble left to right on mobile view. Nothing seems to exceed the width of the screen, but even adding `overflow-x: hidden !important` hasn't fixed the issue. UPDATE: After restarting my browser it now works as expected.
 
 
 ### Functional Bugs
