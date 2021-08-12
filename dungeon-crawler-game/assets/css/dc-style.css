@@ -75,7 +75,11 @@
 #dc-settings.audio-setting:hover{
     color: white;
 }
-
+@media (max-width: 1080px){
+    #dc-option-buttons{
+        grid-template-columns: repeat(2, auto);
+    }
+}
 @media (max-width: 768px){
     #dc-container{
         width: 90%;
