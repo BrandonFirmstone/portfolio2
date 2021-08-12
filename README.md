@@ -390,7 +390,7 @@ After clicking save, the below message appears confirming that the site has been
 
 
 ## Content
-- All text content was written by myself.
+- All text content was written by myself for this project.
 
 
 ## Media
