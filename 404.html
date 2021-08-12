@@ -13,13 +13,15 @@
             <a href="index.html">
                 <h1 class="site-title">Dungeon Crawler</h1>
             </a>
-            <!-- nav element used for semantics and accessibility -->
             <nav>
                 <div class="navigation">
+    
+                    <!-- Desktop Navigation -->
                     <ul class="navigation-list">
-                        <a href="./dungeon-crawler-game/dungeon-crawler-game.html"><li class="navigation-item">Play Game</li></a>
-                        <a href="./index.html"><li class="navigation-item active">Home</li></a>
+                        <li class="navigation-item"><a href="dungeon-crawler-game.html">Play Game</a></li>
+                        <li class="navigation-item active"><a href="index.html">Home</a></li>
                     </ul>
+                    <!-- mobile navigation hamburger -->
                     <a href="javascript:void(0)" id="navigation-toggle">
                         <!-- Burger button used for navigation -->
                         <i class="fas fa-bars float-right burger-button"></i>
@@ -28,14 +30,15 @@
             </nav>
         </div>
     </header>
-    <!-- End of the page header-->
+    <!-- Mobile Navigation Layer-->
     <div id="overlay">
         <a href="javascript:void(0)" id="overlay-close">&times;</a>
         <div class="overlay-menu">
-            <a href="./dungeon-crawler-game/dungeon-crawler-game.html">Play Game</a>
-            <a href="./index.html">Home</a>
+            <a href="dungeon-crawler-game.html">Play Game</a>
+            <a href="index.html">Home</a>
         </div>
     </div>
+    <!-- End of header/navigation -->
 
     <div id="fnf-content">
         <h1>Oh no!</h1>

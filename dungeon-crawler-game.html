@@ -15,36 +15,39 @@
 
 <body id="dc-body">
     <!-- The below is the header of the page, used to display the logo and navigation -->
-    <header>
-        <div class="header">
-            <a href="index.html">
-                <h1 class="site-title">Dungeon Crawler</h1>
-            </a>
-            <nav>
-                <div class="navigation">
-                    <ul class="navigation-list">
-                        <a href="./dungeon-crawler-game.html">
-                            <li class="navigation-item">Play Game</li>
-                        </a>
-                        <a href="./index.html">
-                            <li class="navigation-item active">Home</li>
-                        </a>
-                    </ul>
-                    <a href="javascript:void(0)" id="navigation-toggle">
-                        <!-- Burger button used for navigation -->
-                        <i class="fas fa-bars float-right burger-button"></i>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <div id="overlay">
-        <a href="javascript:void(0)" id="overlay-close">&times;</a>
-        <div class="overlay-menu">
-            <a href="./dungeon-crawler-game.html">Play Game</a>
-            <a href="./index.html">Home</a>
-        </div>
+    <!-- The below is the header of the page, used to display the logo and navigation -->
+<header>
+    <div class="header">
+        <a href="index.html">
+            <h1 class="site-title">Dungeon Crawler</h1>
+        </a>
+        <nav>
+            <div class="navigation">
+
+                <!-- Desktop Navigation -->
+                <ul class="navigation-list">
+                    <li class="navigation-item"><a href="dungeon-crawler-game.html">Play Game</a></li>
+                    <li class="navigation-item active"><a href="index.html">Home</a></li>
+                </ul>
+                <!-- mobile navigation hamburger -->
+                <a href="javascript:void(0)" id="navigation-toggle">
+                    <!-- Burger button used for navigation -->
+                    <i class="fas fa-bars float-right burger-button"></i>
+                </a>
+            </div>
+        </nav>
     </div>
+</header>
+<!-- Mobile Navigation Layer-->
+<div id="overlay">
+    <a href="javascript:void(0)" id="overlay-close">&times;</a>
+    <div class="overlay-menu">
+        <a href="dungeon-crawler-game.html">Play Game</a>
+        <a href="index.html">Home</a>
+    </div>
+</div>
+<!-- End of header/navigation -->
+
 
     <div id="dc-javascript-warning">
         <h1>JavaScript Error</h1>
