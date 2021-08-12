@@ -1,3 +1,5 @@
+ /*jshint esversion: 6 */ 
+
 let menuButton = document.getElementById("navigation-toggle");
 let closeMenuButton = document.getElementById("overlay-close");
 
@@ -57,5 +59,5 @@ if (history.scrollRestoration) {
 } else {
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
-    }
+    };
 }
