@@ -1,14 +1,3 @@
-/*
-
-    INFORMATION REGARDING COMMENTS
-    Each line of comments either annotates the line of code below itself or is used
-    for ease of reading. Comments are used to seperate each part of the program into
-    sections. For example, a contact page may have the contact form seperate from the
-    contact details. They may also be used to essentially draw a line between sections
-    to visually seperate them so that it is easier to read
-
-*/
-
 /* Style applicable to every page */
 /* Imported Fonts (from Google Fonts) */
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@1,700&display=swap');
@@ -449,8 +438,6 @@ html {
 
     .game-summary {
         width: 100%;
-        height: auto;
-        max-height: auto;
         display: flex;
         overflow-x: hidden;
         flex-direction: column;
