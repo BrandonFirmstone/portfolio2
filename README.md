@@ -1,5 +1,6 @@
 # Dungeon Crawler - A Library of Text-based Adventure Games
-![Project Picture](./link)
+
+![Project Picture](./assets/images/README-images/project-overall.png)
 
 # Table of contents
 
