@@ -114,10 +114,6 @@ The footer is a black and white combination using sleek icons from FontAwesome. 
 
 The home page features a call to action image using a mysterious fantasy background. The page also features thumbnail images for the game, descriptions of the game and a button linking the user to the game.
 
-# Development
-
-## README Purpose
-The README is used in order to convey to the reader the purpose of this website and how it has been developed. Future developers that may work on this site as well as myself can refer to this document to find information regarding the website's current development stage, any bugs and issues found and more. It also means that future developers can keep to the same styles and keep the website consistent.
 
 ## Site Structure
 
@@ -202,6 +198,18 @@ The game page holds the game board for a text based choose your own adventure. C
 
 The music in the game can change depending upon the situation the player is in. For example, in a fight scene battle music would be playing. The game music is all stored in the dungeon-crawler-game/assets/music folder. The music plays with half volume and has looping enabled due to the limited choice of music.
 
+### 404.html
+
+![404 Page](./assets/images/README-images/fnf.png)
+
+The 404 page is in the style of a text adventure game. The user is presented with two options, go to the home page or play a game. The buttons take you to index.html and dungeon-crawler-game.html respectively. The navigation and footer is also fully functional. 
+
+### JavaScript Error
+
+![JavaScript Error](./assets/images/README-images/)
+
+I have added a noscript error to appear on the game page if the user does not have JavaScript enabled. It also includes a handy link to help the user to sort the problem. This is only featured on the game page as other pages do not heavily rely on Javascript for functionality.
+
 ## Unimplemented Features
 
 - The party, inventory and attribute systems have not been implemented due to time constraints. They are features that I would like to add to the game in the future.
@@ -216,138 +224,81 @@ The music in the game can change depending upon the situation the player is in. 
 
 # Testing
 
+## Validation Testing
+
+### Javascript Validator
+
+#### common.js
+
+- Missing a semi-colon on line 62, fixed
+- Missing /*jshint esversion: 6 */ at the top, fixed
+
+#### dungeon-crawler-script.js
+
+- Missing a semi-colon on line 73, fixed
+
+
+#### dungeon-crawler-story.js
+
+- Missing semi-colon on line 591, fixed
+#### 
+
+### HTML Validator
+
+![Navigation Error](./assets/images/README-images/html-validator.png)
+
+This error occurs for every HTML page. I accidentally had the a tags wrapping around the li tags. I swapped these around, fixing the issue.
+
+![Alt Text](./assets/images/README-images/html-validator-alt-text.png)
+
+The error above occured because the thumbnail image on the index.html page was missing alt text. To correct this, I have added the description 'Fantasy Text-based Adventure Game thumbnail' to the image.
+
+![Progress Bar](./assets/images/README-images/html-validator-progress-bar.png)
+
+The error above explains that the progress bar used for the health system cannot have an attribute of name. To fix this, I removed the attribute and it's value.
+
+![Health Bar Label](./assets/images/README-images/html-validator-label-link.png)
+
+The error above occurs because I tried to link the label to the health bar through the name attribute. To fix this, I simply put the health bar's ID in it's place.
+
+![404 Inputs](./assets/images/README-images/html-validator-404-inputs.png)
+
+The above errors are caused in the 404.html file because I added closing tags to the button inputs rather than having them close themselves. To fix this, I changed them to end like ``<input />``
+
+### CSS Validator
+
+![Game Summary](./assets/images/README-images/css-validator-game-summary.png)
+
+The above error is caused by the max-height and height value of auto in common.css. To fix this, I simply removed the height and max-height values.
+
+![Javascript Warning](./assets/images/README-images/css-validator-javascript-warning.png)
+
+The above error is shown because I used a value of auto in padding. To fix this, I removed the auto value.
+
+
 ## Cross Browser and Cross Device Testing
 
-<table>
-<thead>
-  <tr>
-    <th>Device</th>
-    <th>Screen Size (px)</th>
-    <th>Operating System</th>
-    <th>Browser</th>
-    <th>Browser Version</th>
-    <th>Page Tested</th>
-    <th>Results</th>
-    <th>Comments</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Oppo Find X2 Lite</td>
-    <td>1080x2400</td>
-    <td>Android 11</td>
-    <td>Chrome</td>
-    <td>92.0.4515.131</td>
-    <td>Index.html</td>
-    <td>Fail</td>
-    <td>Footer address text-aligned to the left, looks unusual</td>
-  </tr>
-  <tr>
-    <td>Oppo Find X2 Lite</td>
-    <td>1080x2400</td>
-    <td>Android 11</td>
-    <td>Chrome</td>
-    <td>92.0.4515.131</td>
-    <td>Index.html</td>
-    <td>Pass</td>
-    <td>Footer address looks better with changes</td>
-  </tr>
-  <tr>
-    <td>Oppo Find X2 Lite</td>
-    <td>1080x2400</td>
-    <td>Android 11</td>
-    <td>Opera</td>
-    <td>64.2.3282.60128</td>
-    <td>dungeon-crawler-game.html</td>
-    <td>Pass</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HP Omen Laptop</td>
-    <td>1920x1080</td>
-    <td>Windows 10</td>
-    <td>Chrome</td>
-    <td>92.0.4515.131</td>
-    <td>Index.html</td>
-    <td>Pass</td>
-    <td>Can be quite slow to load - could be my internet connection though</td>
-  </tr>
-  <tr>
-    <td>HP Omen Laptop</td>
-    <td>1920x1080</td>
-    <td>Windows 10</td>
-    <td>Edge</td>
-    <td>92.0.902.67</td>
-    <td>Index.html</td>
-    <td>Pass</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HP Omen Laptop</td>
-    <td>1920x1080</td>
-    <td>Windows 10</td>
-    <td>Edge</td>
-    <td>92.0.902.67</td>
-    <td>dungeon-crawler-game.html</td>
-    <td>Pass</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HP Omen Laptop</td>
-    <td>1920x1080</td>
-    <td>Windows 10</td>
-    <td>Edge</td>
-    <td>92.0.902.67</td>
-    <td>404.html</td>
-    <td>Pass</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>HP Omen Laptop</td>
-    <td>1920x1080</td>
-    <td>Windows 10</td>
-    <td>IE</td>
-    <td>21H1</td>
-    <td>dungeon-crawler-game.html</td>
-    <td>Pass</td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
+| Device            | Screen Size | Operating System | Browser | Browser Version | Page Tested               | Results | Comments                                                           |
+|-------------------|-------------|------------------|---------|-----------------|---------------------------|---------|--------------------------------------------------------------------|
+| Oppo Find X2 Lite | 1080x2400   | Android 11       | Chrome  | 92.0.4515.131   | Index.html                | Fail    | Footer address text-aligned to the left, looks unusual             |
+| Oppo Find X2 Lite | 1080x2400   | Android 11       | Chrome  | 92.0.4515.131   | Index.html                | Pass    | Footer address looks better with changes                           |
+| Oppo Find X2 Lite | 1080x2400   | Android 11       | Opera   | 64.2.3282.60128 | dungeon-crawler-game.html | Pass    |                                                                    |
+| HP Omen Laptop    | 1920x1080   | Windows 10       | Chrome  | 92.0.4515.131   | Index.html                | Pass    | Can be quite slow to load - could be my internet connection though |
+| HP Omen Laptop    | 1920x1080   | Windows 10       | Edge    | 92.0.902.67     | Index.html                | Pass    |                                                                    |
+| HP Omen Laptop    | 1920x1080   | Windows 10       | Edge    | 92.0.902.67     | dungeon-crawler-game.html | Pass    |                                                                    |
+| HP Omen Laptop    | 1920x1080   | Windows 10       | Edge    | 92.0.902.67     | 404.html                  | Pass    |                                                                    |
+| HP Omen Laptop    | 1920x1080   | Windows 10       | IE      | 21H1            | dungeon-crawler-game.html | Pass    |                                                                    |
+
 
 ## Manual Testing
 
-<table>
-<thead>
-  <tr>
-    <th>Task/Function</th>
-    <th>Result</th>
-    <th>Comments</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Can you play through the current game?</td>
-    <td>Pass</td>
-    <td>The game does run as intended, meaning the user can get the full experience</td>
-  </tr>
-  <tr>
-    <td>Does every animation work?</td>
-    <td>Pass</td>
-    <td>Animations work successfully on desktop and larger devices on hover, but on touchscreen devices the animation only plays when they are selected.</td>
-  </tr>
-  <tr>
-    <td>Does every navigation link work?</td>
-    <td>Pass</td>
-    <td>Every navigation link works, but I have noticed that on the 404.html and dungeon-crawler-game.html pages the site title doesn't navigate you to the home page.</td>
-  </tr>
-  <tr>
-    <td>Does the music play correctly?</td>
-    <td>Pass</td>
-    <td>The music does play correctly throughout the game.</td>
-  </tr>
-</tbody>
-</table>
+| Task/Function                          | Result | Comments                                                                                                                                                       |
+|----------------------------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Can you play through the current game? | Pass   | The game does run as intended, meaning the user can get the full experience                                                                                    |
+| Does every animation work?             | Pass   | Animations work successfully on desktop and larger devices on hover, but on touchscreen devices the animation only plays when they are selected.               |
+| Does every navigation link work?       | Pass   | Every navigation link works, but I have noticed that on the 404.html and dungeon-crawler-game.html pages the site title doesn't navigate you to the home page. |
+| Does the music play correctly?         | Pass   | The music does play correctly throughout the game.                                                                                                             |
+
 
 ## Known Fixed Bugs
 
@@ -359,7 +310,7 @@ The music in the game can change depending upon the situation the player is in. 
 ### Functional Bugs
 
 - 12/08/2021 - Audio played overlapped every time you click an option. Somewhat fixed, now the audio does not overlap but the audio does stop and start again on every option click. FIXED - Fixed this through adding typeof to if statement
-
+- 12/08/2021 - 'Play a game' button in 404.html took you to an unusual place in the repository, meaning the CSS and page did not load properly. To fix this, I changed the link that the button took you to.
 
 ## Known Unfixed Bugs
 
