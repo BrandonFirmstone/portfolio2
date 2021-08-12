@@ -401,6 +401,9 @@
         border-right: 0;
         border-bottom: 1px solid #f5f5f5;
     }
+    .footer-address{
+        text-align: center;
+    }
 }
 /* */
 /* End of section */
