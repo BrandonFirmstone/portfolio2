@@ -313,7 +313,10 @@
     border-radius: 15px;
     width: 80vw;
 }
-#credits-close{
+#credits-modal a{
+    text-decoration:underline;
+}
+#credits-modal #credits-close{
     color: black;
     float: right;
     font-size: 30px;
